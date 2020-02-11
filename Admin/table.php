@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Table - Brand</title>
+    <title>Table - Taste the Joy</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
@@ -55,6 +55,7 @@
             </div>
             </nav>
             <div class="container-fluid">
+
                 <h3 class="text-dark mb-4">Posts</h3>
                 <div class="card shadow">
                     <div class="card-header py-3">
@@ -107,7 +108,7 @@
             </div>
         </div>
         <footer class="bg-white sticky-footer">
-            <a class="btn btn-info btn-sm border rounded btn-icon-split" role="button" href="post.php" style="display: block;margin: auto;max-width: 170px;"><span class="text-white-50 icon" style="filter: blur(0px);"><i class="fas fa-plus"></i></span><span class="text-white text">Add New Post</span></a>
+            <a class="btn btn-info btn-sm border rounded btn-icon-split" role="button" href="post.php" style="display: block;margin: auto;max-width: 140px;"><span class="text-white-50 icon" style="filter: blur(0px);"><i class="fas fa-plus"></i></span><span class="text-white text">Add New Post</span></a>
             <div class="container my-auto">
                 <div class="text-center my-auto copyright"></div>
             </div>
