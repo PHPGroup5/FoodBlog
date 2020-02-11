@@ -54,7 +54,6 @@
             padding: 20px;
         }
 
-        <--Edit-->
 
         #overedit{
             position: absolute;
