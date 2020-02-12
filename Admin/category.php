@@ -182,7 +182,7 @@
                         ?>            
                         <tr>
                             <td><?php echo $row['name']?></td>
-                            <td><a onclick="showEdit()"><i class="fas fa-edit"></i></a></td>
+                            <td><a href="catEdit.php?id=<?php echo $row['id']?>"><i class="fas fa-edit"></i></a></td>
                             <td><a href="cat-del.php?id=<?php echo $row['id']?>"><i class="far fa-trash-alt"></i></a></td>
                         </tr>
                        <?php endwhile; ?>
@@ -206,22 +206,6 @@
                                 </form>
                                 </div>
                     <!--Edit Dialog-->
-                    <div id="overedit" onclick="hideEdit()"></div>
-                                <div id="edit">
-                                    <h2>Edit Category<span onclick="hideEdit()">&times;</span></i></h2>
-                                <form action = "cat-edit.php" method = "post">
-                                <?php
-                                $id = 6;
-                                $result=mysqli_query($conn,"SELECT * FROM category WHERE id='".$id."' ");
-                                $row=mysqli_fetch_assoc($result);
-                                ?>
-                                    <input type="hidden" id="id" name="id" value="<?php echo $row['id'] ?>">
-                                    <input type="text" name="name" value="<?php echo $row['name'] ?>">
-                                    <input type="submit" name="update" class="btn btn-info btn-sm">
-                                    <input type="reset" name="Cancel" class="btn btn-info btn-sm">
-                                </form>
-                                </div>
-            </div>
 
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
     <script src="assets/js/jquery.min.js"></script>
@@ -237,20 +221,9 @@
 
     }
 
-    function hideDialog(){
-        document.getElementById("overlay").style.display="none";
-        document.getElementById("dialog").style.display="none";
-
-    }
-    function showEdit(){
-        document.getElementById("overedit").style.display="block";
-        document.getElementById("edit").style.display="block";
-
-    }
-
-    function hideEdit(){
-        document.getElementById("overedit").style.display="none";
-        document.getElementById("edit").style.display="none";
+    function hideDialog() {
+        document.getElementById("overlay").style.display = "none";
+        document.getElementById("dialog").style.display = "none";
 
     }
     </script>
