@@ -143,7 +143,19 @@
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
                 <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
-                    <div class="container-fluid"></div>
+                    <div class="container-fluid"> <ul class="nav navbar-nav flex-nowrap ml-auto">
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow" role="presentation">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small">John Doe</span><img class="border rounded-circle img-profile" src="assets/img/avatar.jpg"></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in" role="menu"><a class="dropdown-item" role="presentation" href="#"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" role="presentation" href="#"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Settings</a>
+                                    </div>
+                                </div></li>
+                            <li class="nav-item">
+                                <div class="nav-item">
+                                    <a class="nav-link" href="#" aria-expanded="false"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-600"></i>&nbsp;Logout</a>
+                                </div>
+                            </li>
+                        </ul></div>
                 </nav>
 <div class="container-fluid">
 <h3 class="text-dark mb-1">Category</h3>
@@ -170,7 +182,7 @@
                         ?>            
                         <tr>
                             <td><?php echo $row['name']?></td>
-                            <td><a onclick="showEdit()"><i class="fas fa-edit"></i></a></td>
+                            <td><a href="catEdit.php?id=<?php echo $row['id']?>"><i class="fas fa-edit"></i></a></td>
                             <td><a href="cat-del.php?id=<?php echo $row['id']?>"><i class="far fa-trash-alt"></i></a></td>
                         </tr>
                        <?php endwhile; ?>
@@ -194,27 +206,8 @@
                                 </form>
                                 </div>
                     <!--Edit Dialog-->
-                    <div id="overedit" onclick="hideEdit()"></div>
-                                <div id="edit">
-                                    <h2>Edit Category<span onclick="hideEdit()">&times;</span></i></h2>
-                                <form action = "cat-edit.php" method = "post">
-                                <?php
-                                $id = 8;
-                                $result=mysqli_query($conn,"SELECT * FROM category WHERE id='".$id."' ");
-                                $row=mysqli_fetch_assoc($result);
-                                ?>
-                                    <input type="hidden" id="id" name="id" value="<?php echo $row['id'] ?>">
-                                    <input type="text" name="name" value="<?php echo $row['name'] ?>">
-                                    <input type="submit" name="update" class="btn btn-info btn-sm">
-                                    <input type="reset" name="Cancel" class="btn btn-info btn-sm">
-                                </form>
-                                </div>
-            </div>
-            <footer class="bg-white sticky-footer">
-                <div class="container my-auto">
-                    <div class="text-center my-auto copyright"></div>
-                </div>
-            </footer>
+
+
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -229,20 +222,9 @@
 
     }
 
-    function hideDialog(){
-        document.getElementById("overlay").style.display="none";
-        document.getElementById("dialog").style.display="none";
-
-    }
-    function showEdit(){
-        document.getElementById("overedit").style.display="block";
-        document.getElementById("edit").style.display="block";
-
-    }
-
-    function hideEdit(){
-        document.getElementById("overedit").style.display="none";
-        document.getElementById("edit").style.display="none";
+    function hideDialog() {
+        document.getElementById("overlay").style.display = "none";
+        document.getElementById("dialog").style.display = "none";
 
     }
     </script>

@@ -55,6 +55,7 @@
             </div>
             </nav>
             <div class="container-fluid">
+
                 <h3 class="text-dark mb-4">Posts</h3>
                 <div class="card shadow">
                     <div class="card-header py-3">
@@ -107,7 +108,7 @@
             </div>
         </div>
         <footer class="bg-white sticky-footer">
-            <a class="btn btn-info btn-sm border rounded btn-icon-split" role="button" href="post.php" style="display: block;margin: auto;max-width: 170px;"><span class="text-white-50 icon" style="filter: blur(0px);"><i class="fas fa-plus"></i></span><span class="text-white text">Add New Post</span></a>
+            <a class="btn btn-info btn-sm border rounded btn-icon-split" role="button" href="post.php" style="display: block;margin: auto;max-width: 140px;"><span class="text-white-50 icon" style="filter: blur(0px);"><i class="fas fa-plus"></i></span><span class="text-white text">Add New Post</span></a>
             <div class="container my-auto">
                 <div class="text-center my-auto copyright"></div>
             </div>
