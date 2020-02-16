@@ -31,10 +31,9 @@
                                 include("config.php");
                                 $result = mysqli_query($conn, "SELECT * FROM post ORDER BY created_date DESC");
 
-                               for($i=0;$i<=2;$i++){
+                                for($i=0;$i<=2;$i++){
                                     $row=$result->fetch_assoc();
                                     ?>
-                                    
                                     <tr>
                                         <td style="cursor: pointer">
                                             <?php echo $row['title'] ?>

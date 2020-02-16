@@ -1,7 +1,32 @@
 <?php $title = 'Profile - Taste the Joy'; ?>
 <?php $currentPage = 'profile'; ?>
 <?php require_once('include/header.php') ?>
+<head>
+    <style type="text/css">
+   #fileupload-example-5 {
+    position: relative;
+    overflow: hidden;
+    }
 
+    #fileupload-example-5 input {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.001;
+    }
+
+    input[type="file"] {
+        cursor: pointer;
+    }
+
+    button{
+        cursor: pointer;
+    }
+
+    </style>
+</head>
 <body id="page-top">
 <div id="wrapper">
     <?php require_once('include/nav.php') ?>
@@ -16,8 +41,12 @@
                             <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4"
                                                                            src="assets/img/avatar.jpg" width="160"
                                                                            height="160">
-                                <div class="mb-3">
-                                    <button class="btn btn-primary btn-sm" type="button">Change Photo</button>
+                                <div class="mb-3" >
+                                        <form action="uploadimage.php" method="post" enctype="multipart/form-data">
+                                            <button class="btn btn-primary btn-sm" id="fileupload-example-5" style="cursor: pointer"><input type="file" accept=".jpg, .jpeg, .png" name="image"><span>
+                                        Change Photo</span></button>
+
+                                        </form>
                                 </div>
                             </div>
                         </div>
