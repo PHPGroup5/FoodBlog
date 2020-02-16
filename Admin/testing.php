@@ -31,8 +31,7 @@
                                 include("config.php");
                                 $result = mysqli_query($conn, "SELECT * FROM post ORDER BY created_date DESC");
 
-                                for($i=0;$i<=2;$i++){
-                                    $row=$result->fetch_assoc();
+                                while($row=mysqli_fetch_assoc($result)):
                                     ?>
                                     <tr>
                                         <td style="cursor: pointer">
@@ -47,7 +46,7 @@
                                                         class="material-icons border rounded border-danger">delete</i></a>
                                         </td>
                                     </tr>
-                                <?php } ?>
+                                <?php endwhile; ?>
                                 </tbody>
                             </table>
                         </div>
