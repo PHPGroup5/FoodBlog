@@ -9,7 +9,7 @@
                 </div></li>
             <li class="nav-item">
                 <div class="nav-item">
-                    <a class="nav-link" href="#" aria-expanded="false"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-600"></i>&nbsp;Logout</a>
+                    <a class="nav-link" href="logout.php" aria-expanded="false"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-600"></i>&nbsp;Logout</a>
                 </div>
             </li>
         </ul>
