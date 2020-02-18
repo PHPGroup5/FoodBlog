@@ -1,6 +1,48 @@
 <?php $title = 'Post - Taste the Joy'; ?>
 <?php require_once('include/header.php') ?>
+<head>
+    <style type="text/css">
+        html {
+             min-height: 100%;
+             /* make sure it is at least as tall as the viewport */
+             position: relative;
+             }
+        body {
+          height: 100%;
+          /* force the BODY element to match the height of the HTML element */
+          background-color: #999;
+        }
+        table {
+            width: 100%;
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1000px;
+            float: none;
+              }
+        thead{
+            width: 100%;
+            height: 20px;
+        }
+        tbody {
+            height: 200px;
+            display: inline-block;
+            width: 100%;
+            overflow: auto;
+        }
 
+        .pageCenter {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1000px;
+            float: none;
+        }
+  
+    th,td{
+        width: 768px;
+    }
+    </style>
+</head>
 <body id="page-top">
 <div id="wrapper">
     <?php require_once('include/nav.php') ?>
@@ -14,8 +56,9 @@
                     <div class="card-header py-3">
                         <p class="text-primary m-0 font-weight-bold">Posts Info</p>
                     </div>
+                    <div class="pageCenter" style="width: 1000px;">
                     <div class="card-body">
-                        <div class="table-responsive table mt-2" id="dataTable" role="grid"
+                         <div class="table-responsive table mt-2" id="dataTable" role="grid"
                              aria-describedby="dataTable_info">
                             <table class="table dataTable my-0" id="dataTable">
                                 <thead>
@@ -31,8 +74,7 @@
                                 include("config.php");
                                 $result = mysqli_query($conn, "SELECT * FROM post ORDER BY created_date DESC");
 
-                               for($i=0;$i<=2;$i++){
-                                    $row=$result->fetch_assoc();
+                               while($row=mysqli_fetch_assoc($result)):
                                     ?>
                                     
                                     <tr>
@@ -48,34 +90,12 @@
                                                         class="material-icons border rounded border-danger">delete</i></a>
                                         </td>
                                     </tr>
-                                <?php } ?>
+                                <?php endwhile; ?>
                                 </tbody>
                             </table>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
-                                    <ul class="pagination">
-                                        <li class="page-item"><a class="page-link" href="#" aria-label="Previous">
-                                                <button id="pre" onclick="prev()" value="Submit"
-                                                        class="btn btn-sm btn-outline-primary py-0"
-                                                        style="font-size: 0.8em;">&laquo;
-                                                </button>
-                                            </a></li>
-                                        <li class="page-item active" id="box1"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item" id="box2"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item" id="box3"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="#" aria-label="Next">
-                                                <button id="next" onclick="next()"
-                                                        class="btn btn-sm btn-outline-primary py-0"
-                                                        style="font-size: 0.8em;">&raquo;
-                                                </button>
-                                            </a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
                     </div>
+                </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -96,25 +116,6 @@
 <script src="assets/js/bs-init.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
 <script src="assets/js/theme.js"></script>
-<script type="text/javascript">
-    /*setInterval(next,5000);*/
-    var box = 1;
-
-    function prev() {
-        document.getElementById('box' + box).className = "page-item";
-        box--;
-        if (box < 1) box = 3;
-        document.getElementById('box' + box).className = "page-item active";
-    }
-
-    function next() {
-        document.getElementById('box' + box).className = "page-item";
-        box++;
-        if (box > 3) box = 1;
-        document.getElementById('box' + box).className = "page-item active";
-    }
-
-</script>
 </body>
 
 </html>
