@@ -58,6 +58,8 @@
                     </div>
                     <div class="pageCenter" style="width: 1000px;">
                     <div class="card-body">
+                         <div class="table-responsive table mt-2" id="dataTable" role="grid"
+                             aria-describedby="dataTable_info">
                             <table class="table dataTable my-0" id="dataTable">
                                 <thead>
                                 <tr>
@@ -92,6 +94,7 @@
                                 </tbody>
                             </table>
                     </div>
+                </div>
                 </div>
                 </div>
             </div>
