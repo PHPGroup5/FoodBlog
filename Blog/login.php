@@ -16,16 +16,12 @@
 </header>
 <div class="login-card"><img class="profile-img-card" src="assets/img/avatar_2x.png">
     <p class="profile-name-card"></p>
-    <form class="form-signin"><span class="reauth-email"> </span><input class="form-control" type="email"
-                                                                        id="inputEmail" required=""
-                                                                        placeholder="Email address" autofocus=""><input
-                class="form-control" type="password" id="inputPassword" required="" placeholder="Password">
-        <div
-                class="checkbox">
-            <div class="form-check" style="padding-bottom: 10px;padding-top: 10px;"><input class="form-check-input"
-                                                                                           type="checkbox"
-                                                                                           id="formCheck-1"
-                                                                                           style="margin-top: 10px;"><label
+    <form class="form-signin"><span class="reauth-email"> </span>
+        <input class="form-control" type="email" id="inputEmail" required="" placeholder="Email address" autofocus="">
+        <input class="form-control" type="password" id="inputPassword" required="" placeholder="Password">
+
+        <div class="checkbox">
+            <div class="form-check" style="padding-bottom: 10px;padding-top: 10px;"><input class="form-check-input" type="checkbox" id="formCheck-1" style="margin-top: 10px;"><label
                         class="form-check-label" for="formCheck-1">Remember me</label></div>
         </div>
         <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit">Sign in</button>
