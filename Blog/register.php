@@ -15,32 +15,44 @@
 </header>
 <div class="row register-form">
     <div class="col-md-8 offset-md-2">
-        <form class="custom-form">
+        <form class="custom-form" action="registerQuery.php" method="post">
             <h1>Register Form</h1>
             <div class="form-row form-group">
-                <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Name </label>
+                <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">First
+                        Name </label>
                 </div>
-                <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
+                <div class="col-sm-6 input-column">
+                    <input class="form-control" type="text" name="firstName"></div>
+            </div>
+            <div class="form-row form-group">
+                <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Last
+                        Name </label>
+                </div>
+                <div class="col-sm-6 input-column">
+                    <input class="form-control" type="text" name="lastName"></div>
             </div>
             <div class="form-row form-group">
                 <div class="col-sm-4 label-column"><label class="col-form-label" for="email-input-field">Email </label>
                 </div>
-                <div class="col-sm-6 input-column"><input class="form-control" type="email"></div>
+                <div class="col-sm-6 input-column">
+                    <input class="form-control" type="email" name="email"></div>
             </div>
             <div class="form-row form-group">
                 <div class="col-sm-4 label-column"><label class="col-form-label"
                                                           for="password-input-field">Password </label></div>
-                <div class="col-sm-6 input-column"><input class="form-control" type="password"></div>
+                <div class="col-sm-6 input-column">
+                    <input class="form-control" type="password" name="password"></div>
             </div>
             <div class="form-row form-group">
-                <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-password-input-field">Repeat
+                <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-password-input-field">Confirm
                         Password </label></div>
-                <div class="col-sm-6 input-column"><input class="form-control" type="password"></div>
+                <div class="col-sm-6 input-column">
+                    <input class="form-control" type="password"></div>
             </div>
             <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-5"><label
                         class="form-check-label" for="formCheck-5">I've read and accept the terms and conditions</label>
             </div>
-            <button class="btn btn-light submit-button" type="button">Submit Form</button>
+            <button class="btn btn-light submit-button" type="submit">Submit Form</button>
         </form>
     </div>
 </div>

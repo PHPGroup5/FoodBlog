@@ -11,16 +11,7 @@
                 <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="register.php">Categories</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="about.php">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="login.php">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="register.php">Register</a>
             </li>
 
         </ul>
@@ -28,5 +19,7 @@
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
         </form>
+        <?php include_once ('profileNavUser.php');
+        ?>
     </div>
 </nav>
