@@ -170,6 +170,7 @@
                                     <table class="table">
                                         <thead>
                                         <tr>
+                                            <th>Image</th>
                                             <th>Category Name</th>
                                             <th>Edit</th>
                                             <th>Delete</th>
@@ -182,6 +183,8 @@
                                         while ($row = mysqli_fetch_assoc($result)):
                                             ?>
                                             <tr>
+                                                <td><img class="rounded-circle border shadow mr-2" width="60"
+                                                         src="covers/<?php echo $row['photo'] ?>"></td>
                                                 <td><?php echo $row['name'] ?></td>
                                                 <td><a href="catEdit.php?id=<?php echo $row['id'] ?>"><i
                                                                 class="fas fa-edit"></i></a></td>
@@ -206,7 +209,9 @@
         <div id="overlay" onclick="hideDialog()"></div>
         <div id="dialog">
             <h2>Add Category<span onclick="hideDialog()">&times;</span></i></h2>
-            <form action="cat-add.php" method="post">
+            <form action="cat-add.php" method="post"  enctype="multipart/form-data">
+                <label for="photo">Image</label>
+                <input type="file" name="photo" id="photo">
                 <input type="text" placeholder="Category Name" name="name">
                 <input type="submit" name="Add" class="btn btn-info btn-sm">
                 <input type="reset" name="Cancel" class="btn btn-info btn-sm">

@@ -16,7 +16,7 @@
                         <div class="text-center">
                             <h4 class="text-dark mb-4">Create an Account!</h4>
                         </div>
-                        <form class="user">
+                        <form class="user" action="reg_finish.php">
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user"
                                                                           type="text" id="exampleFirstName"

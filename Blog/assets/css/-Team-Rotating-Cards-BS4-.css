@@ -89,7 +89,9 @@
 #example-box-Login {
   background-image: linear-gradient(to bottom right, #5D26C1, #355C7D, #59C173);
 }
-
+#example-box-Category{
+  background-image: linear-gradient(to bottom right,#4568dc,#355C7D,#b06ab3);
+}
 #example-box-Home {
   background-image: linear-gradient(to bottom right, #22c1c3,#2948ff,#7F00FF);
 }
