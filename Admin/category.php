@@ -139,7 +139,7 @@
                                             class="d-none d-lg-inline mr-2 text-gray-600 small">John Doe</span><img
                                             class="border rounded-circle img-profile" src="assets/img/avatar.jpg"></a>
                                 <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in" role="menu"><a
-                                            class="dropdown-item" role="presentation" href="#"><i
+                                            class="dropdown-item" role="presentation" href="profile.php"><i
                                                 class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a><a
                                             class="dropdown-item" role="presentation" href="#"><i
                                                 class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Settings</a>
@@ -148,7 +148,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="nav-item">
-                                <a class="nav-link" href="#" aria-expanded="false"><i
+                                <a class="nav-link" href="logout.php" aria-expanded="false"><i
                                             class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-600"></i>&nbsp;Logout</a>
                             </div>
                         </li>
