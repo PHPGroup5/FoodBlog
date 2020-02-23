@@ -19,61 +19,22 @@
 <section id="portfolio" class="bg-light">
     <div class="container">
         <div class="row">
+<?php
+include("config.php");
+$result = mysqli_query($conn, "SELECT * FROM category ORDER BY created_date DESC");
+
+while($row=mysqli_fetch_assoc($result)):
+    ?>
             <div class="col-sm-6 col-md-4 portfolio-item">
                 <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content"><i class="fa fa-external-link fa-3x"></i></div>
-                    </div><img class="img-fluid" src="assets/img/portfolio/1-thumbnail.jpg"></a>
+                    </div><img class="img-fluid " src="../Admin/covers/<?php echo $row['photo'] ?>"></a>
                 <div class="portfolio-caption">
-                    <h4>Threads</h4>
+                    <h4><?php echo $row['name'] ?></h4>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-4 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content"><i class="fa fa-external-link fa-3x"></i></div>
-                    </div><img class="img-fluid" src="assets/img/portfolio/2-thumbnail.jpg"></a>
-                <div class="portfolio-caption">
-                    <h4>Explore</h4>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content"><i class="fa fa-external-link fa-3x"></i></div>
-                    </div><img class="img-fluid" src="assets/img/portfolio/3-thumbnail.jpg"></a>
-                <div class="portfolio-caption">
-                    <h4>Finish</h4>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content"><i class="fa fa-external-link fa-3x"></i></div>
-                    </div><img class="img-fluid" src="assets/img/portfolio/4-thumbnail.jpg"></a>
-                <div class="portfolio-caption">
-                    <h4>Lines</h4>
-
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content"><i class="fa fa-external-link fa-3x"></i></div>
-                    </div><img class="img-fluid img-fluid" src="assets/img/portfolio/5-thumbnail.jpg"></a>
-                <div class="portfolio-caption">
-                    <h4>Southwest</h4>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content"><i class="fa fa-external-link fa-3x"></i></div>
-                    </div><img class="img-fluid" src="assets/img/portfolio/6-thumbnail.jpg"></a>
-                <div class="portfolio-caption">
-                    <h4>Window</h4>
-                </div>
-            </div>
+<?php endwhile; ?>
         </div>
     </div>
 </section>
