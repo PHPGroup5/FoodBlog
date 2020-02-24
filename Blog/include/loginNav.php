@@ -16,17 +16,13 @@
             <li class="nav-item">
                 <a class="nav-link" href="about.php">About</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="login.php">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="register.php">Register</a>
-            </li>
 
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
         </form>
+        <?php include_once ('profileNavUser.php');
+        ?>
     </div>
 </nav>

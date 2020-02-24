@@ -1,4 +1,6 @@
-<?php require_once('include/header.php') ?>
+<?php
+session_start();
+require_once('include/header.php') ?>
     <title>About us - Taste the Joy</title>
     </head>
 
@@ -6,9 +8,11 @@
 <header class="masthead">
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-
-
-    <?php require_once('include/navbar.php') ?>
+    <?php
+    if ($_SESSION["loginStatus"] == 0) {
+        require_once('include/navbar.php');
+    } else
+        require_once('include/loginNav.php'); ?>
     <div class="example-box">
         <div class="background-shapes"></div>
         <h1>Who we are</h1>
