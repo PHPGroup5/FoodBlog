@@ -6,7 +6,7 @@
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
-<?php require_once('include/navbar.php') ?>
+<?php require_once('include/navbar.php')?>
 <header class="masthead">
     <div id="example-box-Login" class="example-box">
         <h1 class="text-center"><strong>Welcome Back to Taste the Joy!</strong></h1><span
