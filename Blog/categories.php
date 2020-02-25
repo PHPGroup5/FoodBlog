@@ -11,7 +11,6 @@ session_start(); ?>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
         <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-        <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
         <link rel="stylesheet" href="assets/css/-Team-Rotating-Cards-BS4-.css">
         <link rel="stylesheet" href="assets/css/Google-Style-Login.css">
         <link rel="stylesheet" href="assets/css/Pretty-Footer.css">
@@ -25,6 +24,7 @@ session_start(); ?>
         <link rel="stylesheet" href="assets/css/Animated-Menu-Icon.css">
         <link rel="stylesheet" href="assets/css/Background-motion1-3.css">
         <link rel="stylesheet" href="assets/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <title>Categories - Taste the Joy</title>
     </head>
 
