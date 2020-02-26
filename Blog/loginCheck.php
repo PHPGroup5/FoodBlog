@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("config.php");
 $email = $_POST['email'];
 $password = $_POST['password'];
@@ -12,5 +11,7 @@ if ($result == 1) {
     $_SESSION["loginStatus"] = 1;
     $_SESSION["firstName"] = $data["firstName"];
     header("location: index.php");
-} else
-    echo "fail";
+} else {
+
+    header("location: login.php?msg=failed");
+}
