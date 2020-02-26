@@ -39,5 +39,5 @@
         </div>
         <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit">Sign in</button>
     </form>
-<!--    <a class="forgot-password" href="#">Forgot your password?</a></div>-->
+<!--    <a class="forgot-password" href="#">Forgot your password?</a>--></div>
 <?php require_once('include/footer.php'); ?>
