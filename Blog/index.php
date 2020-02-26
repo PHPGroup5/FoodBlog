@@ -20,7 +20,6 @@ if ($_SESSION["loginStatus"] == 0) {
     </div>
 </header>
 <div class="container">
-    <div class="block-heading"></div>
     <div class="block-content" style="padding: 80px;">
         <div class="clean-blog-post" style="padding-bottom: 70px;">
             <div class="row">
