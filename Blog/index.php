@@ -36,7 +36,7 @@ if ($_SESSION["loginStatus"] == 0) {
                     <div class="info"><span class="text-muted"><?php echo $row['created_date']?></span>
                     </div>
                     <p><?php echo $row['content']?></p>
-                    <button class="btn btn-outline-primary btn-sm" type="button">Read More</button>
+                    <button class="btn btn-outline-primary btn-sm" type="button" onclick="window.location.href = 'blogpost1.php?id=<?php echo $row['id']; ?>'">Read More</button>
                 </div>
             </div>
         </div>
