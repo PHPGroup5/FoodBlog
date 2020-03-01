@@ -530,19 +530,6 @@ p {
 	border: 2px solid #c2c6cc
 }
 
-body {
-	background: 0 0;
-	color: #2a2e2e;
-	font-family: "Helvetica Neue", arial, sans-serif;
-	font-size: 15px;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale
-}
-
-body.dark {
-	color: #fff
-}
-
 a:active,
 a:hover {
 	text-decoration: none

@@ -12,4 +12,5 @@ $last_id = mysqli_insert_id($conn);
 
 $query = "INSERT INTO user_comment_post VALUES ('".$last_id."','".$userID."','".$postID."')";
 mysqli_query($conn, $query);
+header("location: blogpost1.php?id=". $_SESSION['postID']);
 ?>

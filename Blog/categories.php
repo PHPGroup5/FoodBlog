@@ -49,11 +49,10 @@ if ($_SESSION["loginStatus"] == 0) {
             <?php
             include("config.php");
             $result = mysqli_query($conn, "SELECT * FROM category ORDER BY created_date DESC");
-
             while ($row = mysqli_fetch_assoc($result)):
                 ?>
                 <div class="col-sm-6 col-md-4 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                    <a class="portfolio-link" href="categoryDetail.php?id=<?php echo $row['id']?>">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fa fa-external-link fa-3x"></i></div>
                         </div>
