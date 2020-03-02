@@ -12,11 +12,16 @@
         input[type=reset] {
             margin-left: 20px;
         }
+
+        textarea[required] {
+            background-color: red;
+        }
     </style>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote.min.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/summernote/0.8.7/summernote.js"></script>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
@@ -42,7 +47,7 @@
                         <form action="post-add.php" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="title">Title</label>
-                                <input type="text" class="form-control" name="title" id="title">
+                                <input type="text" class="form-control" name="title" id="title" required="required" placeholder="Title">
                             </div>
 
                             <div class="form-group">
@@ -70,7 +75,7 @@
                             </div>
                             <br><br>
 
-                            <input type="submit" class="btn btn-primary btn-md">
+                            <input type="submit" class="btn btn-primary btn-md" onclick="verify()">
                             <input type="reset" class="btn btn-primary btn-md">
                         </form>
                     </li>
@@ -84,6 +89,13 @@
     $(document).ready(function () {
         $('#summernote').summernote();
     });
+
+    function verify(){
+    if(!document.getElementById('summernote').value.trim().length){
+        alert("Please enter the content");
+    }
+ }
+    
 </script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/chart.min.js"></script>
@@ -91,25 +103,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote.min.js"></script>
 <script src="assets/js/theme.js"></script>
-<script type="text/javascript">
-    /*setInterval(next,5000);*/
-    var box = 1;
 
-    function prev() {
-        document.getElementById('box' + box).className = "page-item";
-        box--;
-        if (box < 1) box = 3;
-        document.getElementById('box' + box).className = "page-item active";
-    }
-
-    function next() {
-        document.getElementById('box' + box).className = "page-item";
-        box++;
-        if (box > 3) box = 1;
-        document.getElementById('box' + box).className = "page-item active";
-    }
-
-</script>
 
 </body>
 </html>
