@@ -38,13 +38,18 @@
                 <div class="row mb-3">
                     <div class="col-lg-4">
                         <div class="card mb-3">
-                            <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4"
-                                                                           src="assets/img/avatar.jpg" width="160"
+                            <div class="card-body text-center shadow">
+                                <?php
+        include("config.php");
+        $result=mysqli_query($conn,"SELECT * FROM user WHERE id=1");
+        $row=mysqli_fetch_assoc($result);
+        ?>
+                                <img class="rounded-circle mb-3 mt-4"
+                                                                           src="covers/<?php echo $row['profile_image'] ?>" width="160"
                                                                            height="160">
                                 <div class="mb-3" >
                                         <form action="uploadimage.php" method="post" enctype="multipart/form-data">
-                                            <button class="btn btn-primary btn-sm" id="fileupload-example-5" style="cursor: pointer"><input type="file" accept=".jpg, .jpeg, .png" name="image"><span>
-                                        Change Photo</span></button>
+                                            <input type="file" name="image">
 
                                         </form>
                                 </div>
@@ -90,61 +95,49 @@
                                     <div class="card-header py-3">
                                         <p class="text-primary m-0 font-weight-bold">User Settings</p>
                                     </div>
-                                    <div class="card-body">
-                                        <form>
-                                            <div class="form-row">
-                                                <div class="col">
-                                                    <div class="form-group"><label
-                                                                for="username"><strong>Username</strong></label><input
-                                                                class="form-control" type="text" placeholder="user.name"
-                                                                name="username"></div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-group"><label for="email"><strong>Email
-                                                                Address</strong></label><input class="form-control"
-                                                                                               type="email"
-                                                                                               placeholder="user@example.com"
-                                                                                               name="email"></div>
-                                                </div>
-                                            </div>
-                                            <div class="form-row">
-                                                <div class="col">
-                                                    <div class="form-group"><label for="first_name"><strong>First
-                                                                Name</strong></label><input class="form-control"
-                                                                                            type="text"
-                                                                                            placeholder="John"
-                                                                                            name="first_name"></div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-group"><label for="last_name"><strong>Last
-                                                                Name</strong></label><input class="form-control"
-                                                                                            type="text"
-                                                                                            placeholder="Doe"
-                                                                                            name="last_name"></div>
-                                                </div>
-                                            </div>
-                                            <div class="form-row">
-                                                <div class="col">
-                                                    <div class="form-group"><label for="new_password"><strong>New
-                                                                Password</strong></label><input class="form-control"
-                                                                                                type="password"
-                                                                                                name="new_password"/>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-group"><label for="confirm_pw"><strong>Confirm
-                                                                Password</strong></label><input type="password"
-                                                                                                class="form-control"
-                                                                                                name="confirm_pw"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <button class="btn btn-primary btn-sm" type="submit">Save Settings
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
+<div class="card-body">
+    <form action="pro-edit.php" method="post">
+        <?php
+        include("config.php");
+        $result=mysqli_query($conn,"SELECT * FROM user WHERE id=1");
+        $row=mysqli_fetch_assoc($result);
+        ?>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group"><label for="username"><strong>Username</strong></label>
+                <input class="form-control" type="text" value="<?php echo $row['username'] ?>" name="username"></div>
+            </div>
+            <div class="col">
+                <div class="form-group"><label for="email"><strong>Email Address</strong></label><input class="form-control" type="email" value="<?php echo $row['email'] ?>" name="email"></div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group"><label for="firstname"><strong>First Name</strong></label><input class="form-control" type="text" value="<?php echo $row['firstname'] ?>" name="firstname"></div>
+            </div>
+            <div class="col">
+                <div class="form-group"><label for="lastname"><strong>Last Name</strong></label><input class="form-control"
+                type="text" value="<?php echo $row['lastname'] ?>" name="lastname"></div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group"><label for="password"><strong>New Password</strong></label><input class="form-control" type="password" name="password"
+                    value="<?php echo $row["password"]?>"
+                    >
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group"><label for="confirm_pw"><strong>Confirm Password</strong></label><input type="password"class="form-control" name="confirm_pw" value="<?php echo $row["password"]?>">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary btn-sm" type="submit" name="submit">Save Settings
+            </button>
+        </div>
+    </form>
+</div>
                                 </div>
                                 <div class="card shadow"></div>
                             </div>
