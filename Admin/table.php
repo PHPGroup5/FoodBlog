@@ -3,27 +3,31 @@
 <head>
     <style type="text/css">
         html {
-             min-height: 100%;
-             /* make sure it is at least as tall as the viewport */
-             position: relative;
-             }
-        body {
-          height: 100%;
-          /* force the BODY element to match the height of the HTML element */
-          background-color: #999;
+            min-height: 100%;
+            /* make sure it is at least as tall as the viewport */
+            position: relative;
         }
+
+        body {
+            height: 100%;
+            /* force the BODY element to match the height of the HTML element */
+            background-color: #999;
+        }
+
         table {
             width: 100%;
-            display:block;
+            display: block;
             margin-left: auto;
             margin-right: auto;
             max-width: 1000px;
             float: none;
-              }
-        thead{
+        }
+
+        thead {
             width: 100%;
             height: 20px;
         }
+
         tbody {
             height: 200px;
             display: inline-block;
@@ -37,10 +41,10 @@
             max-width: 1000px;
             float: none;
         }
-  
-    th,td{
-        width: 768px;
-    }
+
+        th, td {
+            width: 768px;
+        }
     </style>
     <title>Admin Panel</title>
 </head>
@@ -49,7 +53,7 @@
     <?php require_once('include/nav.php') ?>
     <div class="d-flex flex-column" id="content-wrapper">
         <div id="content">
-            <?php require_once ('include/profileNav.php')?>
+            <?php require_once('include/profileNav.php') ?>
             <div class="container-fluid">
 
                 <h3 class="text-dark mb-4">Posts</h3>
@@ -58,45 +62,44 @@
                         <p class="text-primary m-0 font-weight-bold">Posts Info</p>
                     </div>
                     <div class="pageCenter" style="width: 1000px;">
-                    <div class="card-body">
-                         <div class="table-responsive table mt-2" id="dataTable" role="grid"
-                             aria-describedby="dataTable_info">
-                            <table class="table dataTable my-0" id="dataTable">
-                                <thead>
-                                <tr>
-                                    <th>Post Title</th>
-                                    <th>Post Image</th>
-                                    <th>Edit</th>
-                                    <th>Delete</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <?php
-                                include("config.php");
-                                $result = mysqli_query($conn, "SELECT * FROM post ORDER BY created_date DESC");
-
-                               while($row=mysqli_fetch_assoc($result)):
-                                    ?>
-                                    
+                        <div class="card-body">
+                            <div class="table-responsive table mt-2" id="dataTable" role="grid"
+                                 aria-describedby="dataTable_info">
+                                <table class="table dataTable my-0" id="dataTable">
+                                    <thead>
                                     <tr>
-                                        <td style="cursor: pointer">
-                                            <?php echo $row['title'] ?>
-                                        </td>
-                                        <td><img class="rounded-circle border shadow mr-2" width="60"
-                                                 src="covers/<?php echo $row['photo'] ?>"></td>
-                                        <td><a href="table.php?id=<?php echo $row['id'] ?>"><i
-                                                        class="material-icons border rounded border-info">edit</i></a>
-                                        </td>
-                                        <td><a href="post-del.php?id=<?php echo $row['id'] ?>"><i
-                                                        class="material-icons border rounded border-danger">delete</i></a>
-                                        </td>
+                                        <th>Post Title</th>
+                                        <th>Post Image</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
                                     </tr>
-                                <?php endwhile; ?>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                    include("config.php");
+                                    $result = mysqli_query($conn, "SELECT * FROM post ORDER BY created_date DESC");
+                                    while ($row = mysqli_fetch_assoc($result)):
+                                        ?>
+
+                                        <tr>
+                                            <td style="cursor: pointer">
+                                                <?php echo $row['title'] ?>
+                                            </td>
+                                            <td><img class="rounded-circle border shadow mr-2" width="60"
+                                                     src="covers/<?php echo $row['photo'] ?>"></td>
+                                            <td><a href="table.php?id=<?php echo $row['id'] ?>"><i
+                                                            class="material-icons border rounded border-info">edit</i></a>
+                                            </td>
+                                            <td><a href="post-del.php?id=<?php echo $row['id'] ?>"><i
+                                                            class="material-icons border rounded border-danger">delete</i></a>
+                                            </td>
+                                        </tr>
+                                    <?php endwhile; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                </div>
                 </div>
             </div>
         </div>
@@ -109,8 +112,7 @@
                 <div class="text-center my-auto copyright"></div>
             </div>
         </footer>
-    </div>
-    <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
+    </div></div>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/chart.min.js"></script>

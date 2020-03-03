@@ -86,9 +86,8 @@
                             <button class="btn btn-primary btn-block text-white btn-user" type="submit">Register Account
                             </button>
                             <hr>
-                            <hr>
                         </form>
-                        <div class="text-center"><a class="small" href="login.php">Already have an account? Login!</a>
+                        <div class="text-center"><a class="small" href="index.php">Already have an account? Login!</a>
                         </div>
                     </div>
                 </div>

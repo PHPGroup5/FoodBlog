@@ -80,9 +80,7 @@
                 </ul>
             </div>
         </div>
-    </div>
-    <a class="border rounded d-inline scroll-to-top" href="#page-top" style="display: none;"><i
-                class="fas fa-angle-up"></i></a></div>
+    </div></div>
 <script>
     $(document).ready(function () {
         $('#summernote').summernote();

@@ -18,6 +18,6 @@ else {
     move_uploaded_file($tmp, "covers/$photo");
     $sql = "INSERT INTO admins(firstname,lastname,email,password,profile_image,created_date,modified_date) VALUES('$firstName','$lastName','$email','$password','$photo',now(),now())";
     mysqli_query($conn, $sql);
-    header("location: login.php");
+    header("location: index.php");
 }
 ?>

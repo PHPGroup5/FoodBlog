@@ -10,10 +10,12 @@ if ($result == 1) {
     $data = mysqli_fetch_assoc($row);
     $_SESSION["adminLoginStatus"] = 1;
     $_SESSION["admin_id"] = $data["id"];
-    $_SESSION["adminFirstName"] = $data["firstName"];
-    $_SESSION["adminLastName"] = $data["lastName"];
+    $_SESSION["adminFirstName"] = $data["firstname"];
+    $_SESSION["adminLastName"] = $data["lastname"];
+    $_SESSION["password"] = $data["password"];
+    $_SESSION["photo"] = $data['profile_image'];
 
-    header("location: index.php");
+    header("location: dashboard.php");
 } else {
-    header("location: login.php?msg=failed");
+    header("location: index.php?msg=failed");
 }
