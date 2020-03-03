@@ -50,17 +50,26 @@
                 <div class="col-sm-4 label-column"><label class="col-form-label"
                                                           for="password-input-field">Password </label></div>
                 <div class="col-sm-6 input-column">
-                    <input class="form-control" type="password" name="password"></div>
+                    <input <?php if (isset($_GET["msg"]) && $_GET["msg"] == 'differentpw') { ?>
+                        style="border: #FF0000 solid 1px;"
+                        <?php } ?> class="form-control" type="password" name="password"></div>
             </div>
             <div class="form-row form-group">
                 <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-password-input-field">Confirm
                         Password </label></div>
                 <div class="col-sm-6 input-column">
-                    <input class="form-control" type="password"></div>
+                    <input <?php if (isset($_GET["msg"]) && $_GET["msg"] == 'differentpw') { ?>
+                        style="border: #FF0000 solid 1px;"
+                        <?php } ?> class="form-control" type="password" name="confirmpassword"></div>
             </div>
-            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-5"><label
-                        class="form-check-label" for="formCheck-5">I've read and accept the terms and conditions</label>
+<?php if (isset($_GET["msg"]) && $_GET["msg"] == 'differentpw') { ?>
+            <div>
+                <span style="color:#a71d2a ; font-size: x-small; text-shadow: #a71d2a;">
+                    <img src="assets/img/exclamation-triangle-solid.svg" style="width: 20px; height: 20px;">Password confirmation does not match.Try again.</span>
             </div>
+<?php } ?>
+
+
             <button class="btn btn-light submit-button" type="submit">Submit Form</button>
         </form>
     </div>
