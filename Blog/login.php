@@ -21,11 +21,11 @@
                 style="border: #FF0000 solid 1px;"
                 <?php } ?>class="form-control" type="email" id="inputEmail" required="" placeholder="Email address"
                 autofocus=""
-                name="email">
+                name="email"  value="<?php if(isset($_COOKIE["member_login"])) { echo $_COOKIE["member_login"]; } ?>">
         <input<?php if (isset($_GET["msg"]) && $_GET["msg"] == 'failed') { ?>
             style="border: #FF0000 solid 1px;"
         <?php } ?> class="form-control" type="password" id="inputPassword" required="" placeholder="Password"
-                   name="password">
+                   name="password"  value="<?php if(isset($_COOKIE["member_password"])) { echo $_COOKIE["member_password"]; } ?>">
         <?php if (isset($_GET["msg"]) && $_GET["msg"] == 'failed') { ?>
             <div>
                 <span style="color:#a71d2a ; font-size: x-small; text-shadow: #a71d2a;">
@@ -37,7 +37,9 @@
                 <input class="form-check-input"
                        type="checkbox"
                        id="formCheck-1"
-                       style="margin-top: 10px;"><label
+                    <?php if(isset($_COOKIE["member_login"])) { ?> checked
+                    <?php } ?> />
+                       style="margin-top: 10px;" name="remember"><label
                         class="form-check-label" for="formCheck-1">Remember me</label></div>
         </div>
         <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit">Sign in</button>
