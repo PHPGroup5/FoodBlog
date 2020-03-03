@@ -16,7 +16,7 @@ require_once('include/header.php') ?>
     <div class="example-box">
         <div class="background-shapes"></div>
         <h1>Who we are</h1>
-        <span class="text-center subheading "><br>Welcome!! We are Php  project Group 5.There are five member in our team.Our team is the voice,author and creator of Taste the Joy.At taste the joy, you’ll find healthy dishes that don’t sacrifice any of the flavor that can be found in their full-fat origins.  <br></span>
+       
     </div>
 </header>
 <div class="container">
@@ -37,8 +37,7 @@ require_once('include/header.php') ?>
                                     <h3 class="text-capitalize m-0">Thinzar Aung</h3>
                                     <p class="text-secondary mb-3">Blog post creator</p>
                                     <p><em> Hi I am Thinzar aung.I am the post creator of taste the joy.I have a huge
-                                            passion for food blogging and delicious.You will want to eat everything
-                                            Taste the joy photographs.</em></div>
+                                            passion for food blogging .</em></div>
 
                             </div>
                             <div class="back-imagia">
@@ -52,8 +51,7 @@ require_once('include/header.php') ?>
                                     <div class="social-imagia text-center"><a class="m-2"
                                                                               href="https://www.facebook.com/thinzar.aung.399?"><i
                                                     class="fa fa-facebook"></i></a><a class="m-2" href="#"><i
-                                                    class="fa fa-github"></i></a><a class="m-2" href="#"><i
-                                                    class="fa fa-twitter"></i></a></div>
+                                                    class="fa fa-github"></i></a><a class="m-2" href="#"></a></div>
                                 </div>
                             </div>
                         </div>
@@ -71,9 +69,7 @@ require_once('include/header.php') ?>
                                 <div class="py-1 px-3 text-center">
                                     <h3 class="text-capitalize m-0">Thiri Chan Nyein</h3>
                                     <p class="text-secondary mb-3"> Back end Developer</p>
-                                    <p><em>Hi I am Chan.What you will find here is a collection of blog post for
-                                            flavorful breakfasts, hot and filling lunches, easy dinners for any day of
-                                            the week. </em></div>
+                                    <p><em>Hi I am Chan.What you will find here is a collection of blog post for flavorful breakfasts, hot and filling lunches, easy dinners for any day of the week. </em></div>
 
                             </div>
                             <div class="back-imagia">
@@ -87,8 +83,7 @@ require_once('include/header.php') ?>
                                     <div class="social-imagia text-center"><a class="m-2"
                                                                               href="https://www.facebook.com/thirichan.nyein.9?"><i
                                                     class="fa fa-facebook"></i></a><a class="m-2" href="#"><i
-                                                    class="fa fa-github"></i></a><a class="m-2" href="#"><i
-                                                    class="fa fa-twitter"></i></a></div>
+                                                    class="fa fa-github"></i></a><a class="m-2" href="#"></a></div>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +100,7 @@ require_once('include/header.php') ?>
                                 <div class="py-1 px-3 text-center">
                                     <h3 class="text-capitalize m-0">Hein Khant Zaw</h3>
                                     <p class="text-secondary mb-3">Project Leader and Front end developer</p>
-                                    <p><em>Hi I am Hein khant zaw.Be prepared for seasonal, gorgeous recipes.Unlike most
+                                    <p><em>Hi I am Hein khant zaw.Unlike most
                                             of the food blogs, this one is about the experiences and food itself. Our
                                             team reviews various food in Yangon.  </em></div>
 
@@ -122,8 +117,7 @@ require_once('include/header.php') ?>
                                                                               href="https://www.facebook.com/hein.zaw.9028"><i
                                                     class="fa fa-facebook"></i></a><a class="m-2"
                                                                                       href="https://github.com/HeinKhantZaw"><i
-                                                    class="fa fa-github"></i></a><a class="m-2" href="#"><i
-                                                    class="fa fa-twitter"></i></a></div>
+                                                    class="fa fa-github"></i></a><a class="m-2" href="#"></a></div>
                                 </div>
                             </div>
                         </div>
@@ -156,8 +150,7 @@ require_once('include/header.php') ?>
                                     <div class="social-imagia text-center"><a class="m-2"
                                                                               href="https://www.facebook.com/profile.php?id=100015064938618"><i
                                                     class="fa fa-facebook"></i></a><a class="m-2" href="#"><i
-                                                    class="fa fa-github"></i></a><a class="m-2" href="#"><i
-                                                    class="fa fa-twitter"></i></a></div>
+                                                    class="fa fa-github"></i></a><a class="m-2" href="#"></a></div>
                                 </div>
                             </div>
                         </div>
@@ -192,8 +185,7 @@ require_once('include/header.php') ?>
                                                                               href="https://www.facebook.com/orasulli.khant"><i
                                                     class="fa fa-facebook"></i></a><a class="m-2"
                                                                                       href="https://github.com/Khant-haythi"><i
-                                                    class="fa fa-github"></i></a><a class="m-2" href="#"><i
-                                                    class="fa fa-twitter"></i></a></div>
+                                                    class="fa fa-github"></i></a><a class="m-2" href="#"></a></div>
                                 </div>
                             </div>
                         </div>
