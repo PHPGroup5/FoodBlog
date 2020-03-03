@@ -12,4 +12,3 @@
     <link rel="stylesheet" href="assets/css/MUSA_panel-table-1.css">
     <link rel="stylesheet" href="assets/css/MUSA_panel-table.css">
 
-

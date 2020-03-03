@@ -7,7 +7,7 @@ if($image){
 	move_uploaded_file($tmp,"covers/$image");
 }
 
-$sql="UPDATE user SET profile_image='$image' WHERE id=1";
+$sql="UPDATE admins SET profile_image='$image' WHERE id=1";
 mysqli_query($conn,$sql);
 header("location: profile.php");
 ?>

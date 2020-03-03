@@ -11,8 +11,8 @@ if ($result == 1) {
     $_SESSION["loginStatus"] = 1;
     $_SESSION["user_id"] = $data["id"];
     $_SESSION["firstName"] = $data["firstName"];
-    header("location: index.php");
-} else {
 
-    header("location: login.php?msg=failed");
+    header("location: dashboard.php");
+} else {
+    header("location: index.php?msg=failed");
 }

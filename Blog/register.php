@@ -13,7 +13,7 @@
         <span class="text-center subheading"><br>Register atwt sar shar pee yay<br><br></span>
     </div>
 </header>
-<div class="row register-form">
+<div class="row register-form" style="margin-right: 0rem;">
     <div class="col-md-8 offset-md-2">
         <form class="custom-form" action="registerQuery.php" method="post">
             <h1>Register Form</h1>
@@ -35,8 +35,17 @@
                 <div class="col-sm-4 label-column"><label class="col-form-label" for="email-input-field">Email </label>
                 </div>
                 <div class="col-sm-6 input-column">
-                    <input class="form-control" type="email" name="email"></div>
+                    <input <?php if (isset($_GET["msg"]) && $_GET["msg"] == 'failed') { ?>
+                        style="border: #FF0000 solid 1px;"
+                    <?php } ?> class="form-control" type="email" name="email"></div>
             </div>
+            <?php if (isset($_GET["msg"]) && $_GET["msg"] == 'failed') { ?>
+                <div style="margin-top: -15px;margin-bottom: 10px;">
+                <span style="color:#a71d2a ; font-size: x-small; text-shadow: #a71d2a;">
+                    <img src="assets/img/exclamation-triangle-solid.svg" style="width: 20px; height: 20px;"> Email is duplicated .Try again.</span>
+                </div>
+            <?php } ?>
+
             <div class="form-row form-group">
                 <div class="col-sm-4 label-column"><label class="col-form-label"
                                                           for="password-input-field">Password </label></div>
