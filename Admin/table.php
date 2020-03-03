@@ -42,6 +42,7 @@
         width: 768px;
     }
     </style>
+    <title>Admin Panel</title>
 </head>
 <body id="page-top">
 <div id="wrapper">

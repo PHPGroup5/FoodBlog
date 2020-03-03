@@ -2,6 +2,6 @@
 
 session_start();
 session_unset();
-header("location: ../Blog/index.php");
+header("location: ../Admin/login.php");
 
 ?>

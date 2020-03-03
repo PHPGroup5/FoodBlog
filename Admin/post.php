@@ -28,8 +28,7 @@
     <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
     <link rel="stylesheet" href="assets/css/MUSA_panel-table-1.css">
     <link rel="stylesheet" href="assets/css/MUSA_panel-table.css">
-
-
+    <title>Admin Panel</title>
 </head>
 <body>
 <div id="wrapper">
@@ -41,7 +40,6 @@
                 <ul class="list-group">
                     <li class="list-group-item">
                         <h2>Create a New Post</h2>
-
                     </li>
                     <li class="list-group-item">
                         <form action="post-add.php" method="post" enctype="multipart/form-data">
@@ -51,8 +49,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="catgory">Select a Category</label>
-                                <select name="category_id" class="form-control" id="catgory">
+                                <label for="category">Select a Category</label>
+                                <select name="category_id" class="form-control" id="category">
                                     <?php
                                     include("config.php");
                                     $result = mysqli_query($conn, "SELECT id,name FROM category");
