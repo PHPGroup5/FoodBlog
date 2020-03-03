@@ -1,6 +1,7 @@
 <?php $title = 'Dashboard - Taste the Joy'; ?>
 <?php require_once ('include/header.php')?>
-
+<title>Admin Panel</title>
+</head>
 <body id="page-top">
     <div id="wrapper">
         <?php require_once ('include/nav.php')?>

@@ -1,6 +1,7 @@
 <?php $title = 'Login - Taste the Joy'; ?>
 <?php require_once('include/header.php') ?>
-
+<title>Admin Panel</title>
+</head>
 <body class="bg-gradient-primary"
       style="background-color: #4e73df;background-image: linear-gradient(0deg,#3f4c6b,#606c88);background-size: cover;">
 <div class="container">
@@ -18,7 +19,7 @@
                                 <div class="text-center">
                                     <h4 class="text-dark mb-4">Welcome!</h4>
                                 </div>
-                                <form class="user">
+                                <form class="user" action="adminLoginCheck.php" method="post">
                                     <div class="form-group"><input class="form-control form-control-user" type="email"
                                                                    id="exampleInputEmail" aria-describedby="emailHelp"
                                                                    placeholder="Enter Email Address..." name="email">
@@ -26,6 +27,14 @@
                                     <div class="form-group"><input class="form-control form-control-user"
                                                                    type="password" id="exampleInputPassword"
                                                                    placeholder="Password" name="password"></div>
+                                    <?php if (isset($_GET["msg"]) && $_GET["msg"] == 'failed') { ?>
+                                        <div class="text-center">
+                                            <h4 class="mb-4"
+                                                style="color:#a71d2a ; font-size: x-large; text-shadow: #a71d2a;"><img
+                                                        src="../Blog/assets/img/exclamation-triangle-solid.svg"
+                                                        style="width: 20px; height: 20px;">Email or password is incorrect.</h4>
+                                        </div>
+                                    <?php } ?>
                                     <div class="form-group">
                                         <div class="custom-control custom-checkbox small">
                                             <div class="form-check"><input class="form-check-input custom-control-input"
