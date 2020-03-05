@@ -23,11 +23,11 @@
         <div class="clearfix"></div>
         <div class="col-md-4 footer-about">
             <h4>About the website</h4>
-            <p><br>This is our college project in PHP. In this website, you can read reviews about the restaurants in
-                Yangon.&nbsp;<br><br></p>
-            <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i
-                            class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i
-                            class="fa fa-github"></i></a></div>
+            <p><br>This is our college project in PHP. In this website, you can read everything about food.&nbsp;<br><br></p>
+            <div class="social-links social-icons">
+                <a href="https://www.facebook.com/hein.zaw.9028"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/hein-zaw-66901b195/"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/PHPGroup5/FoodBlog/tree/master"><i class="fa fa-github"></i></a></div>
         </div>
     </div>
     <p class="text-center company-name" style="font-size: 12px;"><br>Copyright © 2020 Group 5. All rights

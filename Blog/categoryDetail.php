@@ -20,7 +20,7 @@ if ($_SESSION["loginStatus"] == 0) {
     </div>
 </header>
 <div class="container">
-    <div class="block-content" style="padding: 80px;">
+    <div class="block-content" style="padding: 40px;">
 
         <?php
         include("config.php");

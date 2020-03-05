@@ -9,9 +9,6 @@ $sql = "INSERT INTO reg (firstName,lastName,email,password,createdDate,modifiedD
 mysqli_query($conn, $sql);
 if (mysqli_error($conn)) {
     header("location: register.php?msg=failed");
-} else {
-
-    header("location: login.php");
 }
 if($password!=$cpassword)
 {

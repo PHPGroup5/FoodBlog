@@ -1,5 +1,5 @@
 <?php require_once('include/header.php') ?>
-<title>Contact us - FoodBlog</title>
+<title>Search Results - FoodBlog</title>
 </head>
 
 <body>
@@ -13,11 +13,11 @@
     </div>
 </header>
 <div class="container">
-    <div class="block-content" style="padding: 80px;">
+    <div class="block-content" style="padding: 40px;">
         <?php
         include("config.php");
         $search = $_POST["search"];
-        $sql = "SELECT * from post where title LIKE '" . $search . "'";
+        $sql = "SELECT * from post where title LIKE '%".$search."%'";
         $row = mysqli_query($conn, $sql);
         $result = mysqli_num_rows($row);
         if ($result) {

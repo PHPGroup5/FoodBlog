@@ -11,4 +11,5 @@
     <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
     <link rel="stylesheet" href="assets/css/MUSA_panel-table-1.css">
     <link rel="stylesheet" href="assets/css/MUSA_panel-table.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 

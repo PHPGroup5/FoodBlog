@@ -1,3 +1,11 @@
+<?php
+session_start();
+require_once('include/header.php');
+if($_SESSION["adminLoginStatus"]!=1) {
+    header("Location: ./");
+}
+
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -91,7 +99,6 @@
         alert("Please enter the content");
     }
  }
-    
 </script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/chart.min.js"></script>

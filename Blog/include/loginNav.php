@@ -14,6 +14,9 @@
                 <a class="nav-link " href="categories.php">Categories</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link " href="recommend.php">Recommendations</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="about.php">About</a>
             </li>
 

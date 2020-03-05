@@ -1,5 +1,11 @@
+<style>
+    .choice:hover
+    {
+        background-color: #282b44;
+    }
+</style>
 <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion p-0" style="
-    background-color: #b20a2c;
+    background-color: #373B5F;
     background-size: cover;
 ">
     <div class="container-fluid d-flex flex-column p-0">
@@ -9,13 +15,13 @@
         </a>
         <hr class="sidebar-divider my-0">
         <ul class="nav navbar-nav text-light" id="accordionSidebar">
-            <li class="nav-item" role="presentation"><a class="nav-link" href="index.php"><i
+            <li class="nav-item choice" role="presentation"><a class="nav-link" href="dashboard.php"><i
                             class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-            <li class="nav-item" role="presentation"><a class="nav-link" href="profile.php"><i
+            <li class="nav-item choice" role="presentation"><a class="nav-link" href="profile.php"><i
                             class="fas fa-user"></i><span>Profile</span></a></li>
-            <li class="nav-item" role="presentation"><a class="nav-link" href="table.php"><i
+            <li class="nav-item choice" role="presentation"><a class="nav-link" href="table.php"><i
                             class="fas fa-plus-square"></i><span>Post</span></a></li>
-            <li class="nav-item" role="presentation"><a class="nav-link" href="category.php"><i
+            <li class="nav-item choice" role="presentation"><a class="nav-link" href="category.php"><i
                             class="fas fa-window-maximize"></i><span>Category</span></a></li>
         </ul>
         <div class="text-center d-none d-md-inline">

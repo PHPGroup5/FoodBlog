@@ -1,6 +1,10 @@
 <?php
 session_start();
-require_once('include/header.php') ?>
+require_once('include/header.php');
+include("config.php");
+if ($_SESSION["adminLoginStatus"] != 1) {
+    header("Location: ./");
+} ?>
 <head>
     <style type="text/css">
         .upload-btn-wrapper {
@@ -11,8 +15,8 @@ require_once('include/header.php') ?>
 
         .uploadBtn {
             color: #fff;
-            background-color: #4e73df;
-            border-color: #4e73df;
+            background-color: #373B5F;
+            border-color: #373B5F;
             padding: 8px 20px;
             border-radius: 8px;
             font-size: 15px;
@@ -27,6 +31,7 @@ require_once('include/header.php') ?>
             opacity: 0;
             cursor: pointer;
         }
+
         #fileupload-example-5 {
             position: relative;
             overflow: hidden;
@@ -64,8 +69,7 @@ require_once('include/header.php') ?>
                         <div class="card mb-3">
                             <div class="card-body text-center shadow">
                                 <?php
-                                include("config.php");
-                                $result = mysqli_query($conn, "SELECT * FROM admins where id =" . $_SESSION['adminID']);
+                                $result = mysqli_query($conn, "SELECT * FROM admins where id =" . $_SESSION['admin_id']);
                                 $row = mysqli_fetch_assoc($result);
                                 ?>
                                 <img class="rounded-circle mb-3 mt-4"
@@ -77,6 +81,7 @@ require_once('include/header.php') ?>
                                             <button class="uploadBtn">Upload a file</button>
                                             <input class="form-control" type="file" name="image">
                                         </div>
+                                        <input class="form-control" type="submit" placeholder="Change Profile">
                                     </form>
                                 </div>
                             </div>
@@ -90,12 +95,8 @@ require_once('include/header.php') ?>
                                         <p class="text-primary m-0 font-weight-bold">User Settings</p>
                                     </div>
                                     <div class="card-body">
-                                        <form action="pro-edit.php" method="post">
-                                            <?php
-                                            include("config.php");
-                                            $result = mysqli_query($conn, "SELECT * FROM admins where id =" . $_SESSION['adminID']);
-                                            $row = mysqli_fetch_assoc($result);
-                                            ?>
+                                        <form action="profile-edit.php" method="post">
+
                                             <div class="form-row">
                                                 <div class="col">
                                                     <div class="form-group"><label for="email"><strong>Email
@@ -105,7 +106,7 @@ require_once('include/header.php') ?>
                                                                                                name="oldEmail">
                                                         <input class="form-control"
                                                                type="email"
-                                                               name="newEmail"></div>
+                                                               name="email"></div>
                                                 </div>
                                             </div>
                                             <div class="form-row">
@@ -126,7 +127,7 @@ require_once('include/header.php') ?>
                                                         <input class="form-control"
                                                                type="hidden"
                                                                value="<?php echo $row['lastname'] ?>"
-                                                               name="lastname">
+                                                               name="oldlastname">
                                                         <input class="form-control"
                                                                type="text"
                                                                name="lastname">
@@ -143,23 +144,37 @@ require_once('include/header.php') ?>
                                                                value="<?php echo $row["password"] ?>">
                                                         <input class="form-control"
                                                                type="password"
-                                                               name="password">
+                                                               name="password"
+                                                            <?php if (isset($_GET["msg"]) && $_GET["msg"] == 'differentpw') { ?>
+                                                                style="border: #FF0000 solid 1px;"
+                                                            <?php } ?>>
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group"><label for="confirm_pw"><strong>Confirm
-                                                                Password</strong></label><input type="password"
-                                                                                                class="form-control"
-                                                                                                name="confirm_pw"
-                                                                                                value="<?php echo $row["password"] ?>">
+                                                                Password</strong></label>
+                                                        <input type="password"
+                                                               class="form-control"
+                                                               name="confirm_pw"
+                                                            <?php if (isset($_GET["msg"]) && $_GET["msg"] == 'differentpw') { ?>
+                                                                style="border: #FF0000 solid 1px;"
+                                                            <?php } ?>>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <button class="btn btn-primary btn-sm" type="submit" name="submit">Save
-                                                    Settings
+                                                <button class="btn btn-primary btn-sm" type="submit" name="submit"
+                                                        style="background: #373B5F;">
+                                                    Save Settings
                                                 </button>
                                             </div>
+                                            <?php if (isset($_GET["msg"]) && $_GET["msg"] == 'differentpw') { ?>
+                                                <div>
+                                                    <span style="color:#a71d2a ; font-size: x-small; text-shadow: #a71d2a;"><img
+                                                                src="../Blog/assets/img/exclamation-triangle-solid.svg"
+                                                                style="width: 20px; height: 20px;">Password confirmation does not match.Try again.</span>
+                                                </div>
+                                            <?php } ?>
                                         </form>
                                     </div>
                                 </div>
@@ -177,6 +192,15 @@ require_once('include/header.php') ?>
         </footer>
     </div>
 </div>
+<?php if (isset($_GET["msg"]) && $_GET["msg"] == 'success') { ?>
+<script>
+    Swal.fire(
+        '',
+        'Profile successfully updated!',
+        'success'
+    )
+</script>
+<?php } ?>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/chart.min.js"></script>

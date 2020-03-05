@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -55,28 +58,6 @@
             padding: 20px;
         }
 
-
-        #overedit {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: cadetblue;
-            opacity: 0.8;
-            display: none;
-        }
-
-        #edit {
-            position: absolute;
-            top: 26%;
-            left: 35%;
-            width: 30%;
-            border: 1px solid gray;
-            background: #fff;
-            display: none;
-        }
-
         #edit h2 {
             margin: 0;
             padding: 8px;
@@ -129,33 +110,23 @@
     <div class="d-flex flex-column" id="content-wrapper">
         <div id="content">
             <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
-                <div class="container-fluid">
+                <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
                     <ul class="nav navbar-nav flex-nowrap ml-auto">
                         <div class="d-none d-sm-block topbar-divider"></div>
                         <li class="nav-item dropdown no-arrow" role="presentation">
-                            <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
-                                                                       data-toggle="dropdown" aria-expanded="false"
-                                                                       href="#"><span
-                                            class="d-none d-lg-inline mr-2 text-gray-600 small">John Doe</span><img
-                                            class="border rounded-circle img-profile" src="assets/img/avatar.jpg"></a>
-                                <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in" role="menu"><a
-                                            class="dropdown-item" role="presentation" href="profile.php"><i
-                                                class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a><a
-                                            class="dropdown-item" role="presentation" href="#"><i
-                                                class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Settings</a>
-                                </div>
-                            </div>
-                        </li>
+                            <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small"><?php
+                                        echo $_SESSION['adminFirstName']." ".$_SESSION['adminLastName'];
+                                        ?></span>
+                                    <img class="border rounded-circle img-profile" src="covers/<?php echo $_SESSION['photo']?>"></a>
+                            </div></li>
                         <li class="nav-item">
                             <div class="nav-item">
-                                <a class="nav-link" href="logout.php" aria-expanded="false"><i
-                                            class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-600"></i>&nbsp;Logout</a>
+                                <a class="nav-link" href="logout.php" aria-expanded="false"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-600"></i>&nbsp;Logout</a>
                             </div>
                         </li>
                     </ul>
                 </div>
-            </nav>
-            <div class="container-fluid">
+            </nav> <div class="container-fluid">
                 <h3 class="text-dark mb-1">Category</h3>
                 <div class="row text-center" style="padding-bottom: 16px;">
                     <div class="col">
@@ -201,15 +172,16 @@
                 </div>
             </div>
             <a class="btn btn-info btn-sm border rounded btn-icon-split" role="button" onclick="showDialog()"
-               style="display: block;margin: auto;max-width: 170px;"><span class="text-white-50 icon"
-                                                                           style="filter: blur(0px);"><i
+               style="display: block;margin: auto;max-width: 170px;background: #373B5F;"><span
+                        class="text-white-50 icon"
+                        style="filter: blur(0px);"><i
                             class="fas fa-plus"></i></span><span class="text-white text">Add New Category</span></a>
         </div>
         <!--Dialog-->
         <div id="overlay" onclick="hideDialog()"></div>
         <div id="dialog">
             <h2>Add Category<span onclick="hideDialog()">&times;</span></i></h2>
-            <form action="cat-add.php" method="post"  enctype="multipart/form-data">
+            <form action="cat-add.php" method="post" enctype="multipart/form-data">
                 <label for="photo">Image</label>
                 <input type="file" name="photo" id="photo">
                 <input type="text" placeholder="Category Name" name="name">
@@ -219,12 +191,14 @@
         </div>
         <!--Edit Dialog-->
 
-    </div></div>
+    </div>
+</div>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/chart.min.js"></script>
 <script src="assets/js/bs-init.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script src="assets/js/theme.js"></script>
 <script type="text/javascript">
     function showDialog() {

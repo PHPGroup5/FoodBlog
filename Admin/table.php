@@ -1,5 +1,11 @@
-<?php $title = 'Post - Taste the Joy'; ?>
-<?php require_once('include/header.php') ?>
+<?php
+session_start();
+require_once('include/header.php');
+if ($_SESSION["adminLoginStatus"] != 1) {
+    header("Location: ./");
+}
+
+?>
 <head>
     <style type="text/css">
         html {
@@ -70,7 +76,7 @@
                                     <tr>
                                         <th>Post Title</th>
                                         <th>Post Image</th>
-                                        <th>Edit</th>
+                                        <th>Edit Post</th>
                                         <th>Delete</th>
                                     </tr>
                                     </thead>
@@ -80,14 +86,13 @@
                                     $result = mysqli_query($conn, "SELECT * FROM post ORDER BY created_date DESC");
                                     while ($row = mysqli_fetch_assoc($result)):
                                         ?>
-
                                         <tr>
                                             <td style="cursor: pointer">
                                                 <?php echo $row['title'] ?>
                                             </td>
                                             <td><img class="rounded-circle border shadow mr-2" width="60"
                                                      src="covers/<?php echo $row['photo'] ?>"></td>
-                                            <td><a href="table.php?id=<?php echo $row['id'] ?>"><i
+                                            <td><a href="post-edit.php?id=<?php echo $row['id'] ?>"><i
                                                             class="material-icons border rounded border-info">edit</i></a>
                                             </td>
                                             <td><a href="post-del.php?id=<?php echo $row['id'] ?>"><i
@@ -105,14 +110,25 @@
         </div>
         <footer class="bg-white sticky-footer">
             <a class="btn btn-info btn-sm border rounded btn-icon-split" role="button" href="post.php"
-               style="display: block;margin: auto;max-width: 140px;"><span class="text-white-50 icon"
-                                                                           style="filter: blur(0px);"><i
+               style="display: block;margin: auto;max-width: 140px;background: #373B5F;"><span
+                        class="text-white-50 icon"
+                        style="filter: blur(0px);"><i
                             class="fas fa-plus"></i></span><span class="text-white text">Add New Post</span></a>
             <div class="container my-auto">
                 <div class="text-center my-auto copyright"></div>
             </div>
         </footer>
-    </div></div>
+    </div>
+</div>
+<?php if (isset($_GET["msg"]) && $_GET["msg"] == 'success') { ?>
+<script>
+    Swal.fire(
+        '',
+        'Post successfully updated!',
+        'success'
+    )
+</script>
+<?php } ?>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/chart.min.js"></script>

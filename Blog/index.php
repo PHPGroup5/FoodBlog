@@ -22,12 +22,11 @@ if ($_SESSION["loginStatus"] == 0) {
     </div>
 </header>
 <div class="container">
-    <div class="block-content" style="padding: 80px;">
+    <div class="block-content" style="padding: 40px;">
         
         <?php
             include("config.php");
             $result = mysqli_query($conn, "SELECT * FROM post ORDER BY created_date DESC");
-
             while ($row = mysqli_fetch_assoc($result)):?>
         <div class="clean-blog-post" style="padding-bottom: 40px;">
             <div class="row">
@@ -37,7 +36,7 @@ if ($_SESSION["loginStatus"] == 0) {
                     <h3><?php echo $row['title']?></h3>
                     <div class="info"><span class="text-muted"><?php echo $row['created_date']?></span>
                     </div>
-                    <p><?php echo $row['content']?></p>
+                    <p><?php echo substr($row['content'], 0, 400); ?></p>
                     <button class="btn btn-outline-primary btn-sm" type="button" onclick="window.location.href = 'blogpost1.php?id=<?php echo $row['id']; ?>'">Read More</button>
                 </div>
             </div>
