@@ -14,6 +14,6 @@ if($password!=$cpassword)
 {
     header("location: register.php?msg=differentpw");
 }else{
-    header("location: login.php");
+    header("location: login.php?msg=success");
 }
 ?>

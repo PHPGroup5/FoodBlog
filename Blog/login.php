@@ -5,8 +5,17 @@
     <body>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <?php require_once('include/navbar.php') ?>
+<?php if (isset($_GET["msg"]) && $_GET["msg"] == 'success') { ?>
+    <script>
+        Swal.fire(
+            '',
+            'User successfully registered!',
+            'success'
+        )
+    </script>
+<?php } ?>
 <header class="masthead">
     <div id="example-box-Login" class="example-box">
         <h1 class="text-center"><strong>Welcome Back to Taste the Joy!</strong></h1><span
