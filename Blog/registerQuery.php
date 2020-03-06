@@ -10,7 +10,7 @@ mysqli_query($conn, $sql);
 if (mysqli_error($conn)) {
     header("location: register.php?msg=failed");
 }
-if($password!=$cpassword)
+else if($password!=$cpassword)
 {
     header("location: register.php?msg=differentpw");
 }else{

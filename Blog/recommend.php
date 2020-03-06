@@ -32,7 +32,7 @@ if ($_SESSION["loginStatus"] == 0) {
                 <div class="row">
                     <div class="col-lg-5"><img class="img-fluid"
                                                href="blogpost1.php?id=<?php echo $row['id']; ?>"
-                                               src="../Admin/covers/<?php echo $row['photo'] ?>"></div>
+                                               src="../Admin/assets/img/covers/<?php echo $row['photo'] ?>"></div>
                     <div class="col-lg-7">
                         <h3><?php echo $row['title'] ?></h3>
                         <div class="info"><span class="text-muted"><?php echo $row['created_date'] ?></span>

@@ -30,15 +30,11 @@ $row = mysqli_fetch_assoc($result);
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-lg-8 mx-auto">
-                <a href="#"><img class="img-fluid" href="#" src="../Admin/covers/<?php echo $row['photo'] ?>""
+                <a href="#"><img class="img-fluid" href="#" src="../Admin/assets/img/covers/<?php echo $row['photo'] ?>""
                     style="margin-top: 3%;"></a>
                 <p style="margin-top: 3%;"><?php echo $row['content'] ?></p>
-
             </div>
         </div>
-        <br>
-        <div class="text-center"><h4>Share this</h4></div>
-        <div class="addthis_inline_share_toolbox_q3ph text-center"></div>
         <br>
         <?php
         if ($_SESSION["loginStatus"] == 1) {

@@ -18,8 +18,7 @@
 <?php } ?>
 <header class="masthead">
     <div id="example-box-Login" class="example-box">
-        <h1 class="text-center"><strong>Welcome Back to Taste the Joy!</strong></h1><span
-                class="text-center subheading"><br>Sign in to get personalized recommendations, read topics you love, and interact with blog posts.<br><br></span>
+        <h1 class="text-center"><strong>Welcome Back to Taste the Joy!</strong></h1>
         <div class="background-shapes"></div>
     </div>
 </header>

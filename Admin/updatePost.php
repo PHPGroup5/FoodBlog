@@ -10,7 +10,7 @@
             $title = $_POST['oldtitle'];
         }
     if ($photo) {
-        move_uploaded_file($tmp, "covers/$photo");
+        move_uploaded_file($tmp, "assets/img/covers/$photo");
     }
         $sql = "UPDATE post SET cat_id='$category_id', title='$title' ,photo = '$photo', content = '$content' WHERE id= '$id' ";
         mysqli_query($conn, $sql);

@@ -70,10 +70,10 @@ if ($_SESSION["adminLoginStatus"] != 1) {
                             <div class="card-body text-center shadow">
                                 <?php
                                 $result = mysqli_query($conn, "SELECT * FROM admins where id =" . $_SESSION['admin_id']);
-                                $row = mysqli_fetch_assoc($result);
+                                $row = mysqli_fetch_assoc($result);swa
                                 ?>
                                 <img class="rounded-circle mb-3 mt-4"
-                                     src="covers/<?php echo $row['profile_image'] ?>" width="160"
+                                     src="assets/img/avatars/<?php echo $row['profile_image'] ?>" width="160"
                                      height="160">
                                 <div class="mb-3">
                                     <form action="uploadimage.php" method="post" enctype="multipart/form-data">

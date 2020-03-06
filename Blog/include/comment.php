@@ -1,3 +1,6 @@
+<div class="text-center"><h4>Share this</h4></div>
+<div class="addthis_inline_share_toolbox_q3ph text-center"></div>
+<br>
 <div class="row">
     <div class="col-md-12 col-lg-12 mx-auto">
         <div class="comment">
@@ -29,7 +32,6 @@
                                             <div data-role="post-content" class="post-content authored-by-session-user"
                                                  tabindex="0">
                                                 <div class="avatar hovercard"><a
-                                                            href="https://disqus.com/by/disqus_omOzwnvYmI/"
                                                             data-action="profile" data-username="disqus_omOzwnvYmI"
                                                             target="_blank" rel="noopener noreferrer" class="user"><img
                                                                 data-role="user-avatar" data-user="345245329"
@@ -39,7 +41,6 @@
                                                     <header class="comment__header"><span
                                                                 class="post-byline"><span> <span
                                                                         class="author publisher-anchor-color"><a
-                                                                            href="https://disqus.com/by/disqus_omOzwnvYmI/"
                                                                             data-action="profile"
                                                                             data-username="disqus_omOzwnvYmI"
                                                                             target="_blank"

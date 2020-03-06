@@ -1,14 +1,13 @@
 <?php
 session_start();
-if (isset($_POST['submit'])) {
     include("config.php");
     $email = $_POST['email'];
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
+    $firstname = $_POST['firstName'];
+    $lastname = $_POST['lastName'];
     $password = $_POST['password'];
-    $confirm_pw = $_POST['confirm_pw'];
+    $confirm_pw = $_POST['confirmpassword'];
     if ($password != $confirm_pw) {
-        header("location: profile.php?msg=differentpw");
+        header("location: updateUser.php?msg=differentpw");
     } else {
         if ($firstname == "") {
             $firstname = $_POST['oldfirstname'];
@@ -22,13 +21,11 @@ if (isset($_POST['submit'])) {
         if ($password == "") {
             $password = $_POST['oldPassword'];
         }
-        $id = $_SESSION['admin_id'];
+        $id = $_SESSION['user_id'];
 
-
-        $sql = "UPDATE admins SET email='$email', firstname='$firstname' , lastname='$lastname',password = '$password',modified_date = now() WHERE id= '$id' ";
+        $sql = "UPDATE reg SET firstname='$firstname' , lastname='$lastname',password = '$password',modified_date = now() WHERE id= '$id' ";
         mysqli_query($conn, $sql);
-        echo mysqli_error($conn);
-        header("location: profile.php?msg=success");
+        $_SESSION["firstName"] = $firstname;
+        header("location: updateUser.php?msg=success");
     }
-}
 ?>

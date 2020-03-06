@@ -117,7 +117,7 @@ session_start();
                             <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small"><?php
                                         echo $_SESSION['adminFirstName']." ".$_SESSION['adminLastName'];
                                         ?></span>
-                                    <img class="border rounded-circle img-profile" src="covers/<?php echo $_SESSION['photo']?>"></a>
+                                    <img class="border rounded-circle img-profile" src="assets/img/avaters/<?php echo $_SESSION['photo']?>"></a>
                             </div></li>
                         <li class="nav-item">
                             <div class="nav-item">
@@ -155,7 +155,7 @@ session_start();
                                             ?>
                                             <tr>
                                                 <td><img class="rounded-circle border shadow mr-2" width="60"
-                                                         src="covers/<?php echo $row['photo'] ?>"></td>
+                                                         src="assets/img/category/<?php echo $row['photo'] ?>"></td>
                                                 <td><?php echo $row['name'] ?></td>
                                                 <td><a href="catEdit.php?id=<?php echo $row['id'] ?>"><i
                                                                 class="fas fa-edit"></i></a></td>

@@ -87,17 +87,16 @@
 }
 
 #example-box-Login {
-  background-image: linear-gradient(to bottom right, #5D26C1, #355C7D, #59C173);
+  background-image: linear-gradient(147deg, #3c697f, #82959c, #da3a53);
 }
 #example-box-Category{
-  background-image: linear-gradient(to bottom right,#4568dc,#355C7D,#b06ab3);
+  background-image: linear-gradient(147deg, #9a2e43, #e9653b, #ad5f53);
 }
 #example-box-Home {
-  background-image: linear-gradient(to bottom right, #22c1c3,#2948ff,#7F00FF);
+  background-image: linear-gradient(147deg, #e95637, #4d5d87, #2c708b);
 }
-
 #example-box-reg {
-  background-image: linear-gradient(to bottom right, #009FFF,#355C7D, #ec2F4B);
+  background-image: linear-gradient(147deg, #c44d3e, #8599b0, #de3648);
 }
 
 #container1 {

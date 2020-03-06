@@ -31,12 +31,12 @@ if ($_SESSION["loginStatus"] == 0) {
             <div class="clean-blog-post" style="padding-bottom: 40px;">
                 <div class="row">
                     <div class="col-lg-5"><img class="img-fluid"
-                                               href="#" src="../Admin/covers/<?php echo $row['photo'] ?>"></div>
+                                               href="blogpost1.php?id=<?php echo $row['id']; ?>" src="../Admin/assets/img/category/<?php echo $row['photo'] ?>"></div>
                     <div class="col-lg-7">
                         <h3><?php echo $row['title']?></h3>
                         <div class="info"><span class="text-muted"><?php echo $row['created_date']?></span>
                         </div>
-                        <p><?php echo $row['content']?></p>
+                        <p><?php echo substr($row['content'], 0, 400); ?></p>
                         <button class="btn btn-outline-primary btn-sm" type="button" onclick="window.location.href = 'blogpost1.php?id=<?php echo $row['id']; ?>'">Read More</button>
                     </div>
                 </div>

@@ -8,7 +8,9 @@
                 ?>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="min-width: 5rem;">
-                <a class="dropdown-item" href="logout.php" style="padding: .25rem 0.5rem;"><i
+                <a class="dropdown-item" href="updateUser.php" style="padding: .25rem 0.5rem;"><i
+                            class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-600"></i>&nbsp;Update</a>
+<a class="dropdown-item" href="logout.php" style="padding: .25rem 0.5rem;"><i
                             class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-600"></i>&nbsp;Logout</a>
 
             </div>

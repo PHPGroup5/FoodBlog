@@ -15,7 +15,7 @@ if(!in_array($file_ext,$extensions)){
     header("location: register.php?msg=failed");
 }
 else {
-    move_uploaded_file($tmp, "covers/$photo");
+    move_uploaded_file($tmp, "assets/img/avatars/$photo");
     $sql = "INSERT INTO admins(firstname,lastname,email,password,profile_image,created_date,modified_date) VALUES('$firstName','$lastName','$email','$password','$photo',now(),now())";
     mysqli_query($conn, $sql);
     header("location: index.php");

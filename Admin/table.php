@@ -91,7 +91,7 @@ if ($_SESSION["adminLoginStatus"] != 1) {
                                                 <?php echo $row['title'] ?>
                                             </td>
                                             <td><img class="rounded-circle border shadow mr-2" width="60"
-                                                     src="covers/<?php echo $row['photo'] ?>"></td>
+                                                     src="assets/img/covers/<?php echo $row['photo'] ?>"></td>
                                             <td><a href="post-edit.php?id=<?php echo $row['id'] ?>"><i
                                                             class="material-icons border rounded border-info">edit</i></a>
                                             </td>

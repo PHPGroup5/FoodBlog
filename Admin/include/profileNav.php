@@ -6,7 +6,7 @@
                 <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small"><?php
                             echo $_SESSION['adminFirstName']." ".$_SESSION['adminLastName'];
                             ?></span>
-                        <img class="border rounded-circle img-profile" src="covers/<?php echo $_SESSION['photo']?>"></a>
+                        <img class="border rounded-circle img-profile" src="assets/img/avatars/<?php echo $_SESSION['photo']?>"></a>
                 </div></li>
             <li class="nav-item">
                 <div class="nav-item">

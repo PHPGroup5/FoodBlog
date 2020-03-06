@@ -9,7 +9,7 @@ $photo = $_FILES['photo']['name'];
 $tmp = $_FILES['photo']['tmp_name'];
 
 if ($photo) {
-    move_uploaded_file($tmp, "covers/$photo");
+    move_uploaded_file($tmp, "assets/img/covers/$photo");
 }
 
 $sql = "INSERT INTO post(title,cat_id,photo,content,created_date,modified_date) VALUES('$title','$category_id','$photo','$content',now(),now())";
