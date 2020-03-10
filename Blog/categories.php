@@ -12,15 +12,11 @@ session_start(); ?>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/-Team-Rotating-Cards-BS4-.css">
-    <link rel="stylesheet" href="assets/css/Google-Style-Login.css">
     <link rel="stylesheet" href="assets/css/Pretty-Footer.css">
     <link rel="stylesheet" href="assets/css/Background-motion1.css">
     <link rel="stylesheet" href="assets/css/Background-motion1-1.css">
     <link rel="stylesheet" href="assets/css/Background-motion1-2.css">
-    <link rel="stylesheet" href="assets/css/A-Blog-Page.css">
     <link rel="stylesheet" href="assets/css/footer-copyright_bar.css">
-    <link rel="stylesheet" href="assets/css/Pretty-Registration-Form.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
     <link rel="stylesheet" href="assets/css/Animated-Menu-Icon.css">
     <link rel="stylesheet" href="assets/css/Background-motion1-3.css">
     <link rel="stylesheet" href="assets/bootstrap.min.css">
@@ -76,7 +72,7 @@ if ($_SESSION["loginStatus"] == 0) {
     </div>
 </section>
 <script src="assets/js/agency.js"></script>
-<footer>
+<footer style="padding: 25px 50px !important;">
     <div class="row">
         <div class="col-sm-6 col-md-4 text-center footer-navigation">
             <h3><a href="#">Taste the Joy</a></h3>

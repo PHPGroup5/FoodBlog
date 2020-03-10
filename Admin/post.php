@@ -74,7 +74,10 @@ if($_SESSION["adminLoginStatus"]!=1) {
                                 <label for="photo">Featured Image</label>
                                 <input type="file" name="photo" class="form-control" id="photo">
                             </div>
-
+                            <div class="form-group">
+                                <label for="intro">Intro</label>
+                                <input type="text" class="form-control" name="intro" id="intro" required="required" placeholder="Intro">
+                            </div>
                             <div class="form-group">
                                 <label for="summernote">Content</label>
                                 <textarea id="summernote" class="form-control" name="content"></textarea>

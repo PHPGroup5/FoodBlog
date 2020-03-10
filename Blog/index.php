@@ -5,7 +5,7 @@ require_once('include/header.php') ?>
     </head>
 
     <body>
-    	
+
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
@@ -36,7 +36,7 @@ if ($_SESSION["loginStatus"] == 0) {
                     <h3><?php echo $row['title']?></h3>
                     <div class="info"><span class="text-muted"><?php echo $row['created_date']?></span>
                     </div>
-                    <p><?php echo substr($row['content'], 0, 400); ?></p>
+                    <p><?php echo ($row['intro']); ?></p>
                     <button class="btn btn-outline-primary btn-sm" type="button" onclick="window.location.href = 'blogpost1.php?id=<?php echo $row['id']; ?>'">Read More</button>
                 </div>
             </div>

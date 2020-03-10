@@ -25,19 +25,23 @@ if ($_SESSION["loginStatus"] == 0) {
         <?php
         include("config.php");
         $cat_id = $_GET['id'];
-        $result = mysqli_query($conn, "SELECT * FROM post WHERE cat_id = '".$cat_id."'ORDER BY created_date DESC");
+        $result = mysqli_query($conn, "SELECT * FROM post WHERE cat_id = '" . $cat_id . "'ORDER BY created_date DESC");
 
         while ($row = mysqli_fetch_assoc($result)):?>
             <div class="clean-blog-post" style="padding-bottom: 40px;">
                 <div class="row">
                     <div class="col-lg-5"><img class="img-fluid"
-                                               href="blogpost1.php?id=<?php echo $row['id']; ?>" src="../Admin/assets/img/category/<?php echo $row['photo'] ?>"></div>
+                                               href="blogpost1.php?id=<?php echo $row['id']; ?>"
+                                               src="../Admin/assets/img/category/<?php echo $row['photo'] ?>"
+                                               style="width: 500px;height: 300px;"></div>
                     <div class="col-lg-7">
-                        <h3><?php echo $row['title']?></h3>
-                        <div class="info"><span class="text-muted"><?php echo $row['created_date']?></span>
+                        <h3><?php echo $row['title'] ?></h3>
+                        <div class="info"><span class="text-muted"><?php echo $row['created_date'] ?></span>
                         </div>
-                        <p><?php echo substr($row['content'], 0, 400); ?></p>
-                        <button class="btn btn-outline-primary btn-sm" type="button" onclick="window.location.href = 'blogpost1.php?id=<?php echo $row['id']; ?>'">Read More</button>
+                        <p><?php echo $row['intro']; ?></p>
+                        <button class="btn btn-outline-primary btn-sm" type="button"
+                                onclick="window.location.href = 'blogpost1.php?id=<?php echo $row['id']; ?>'">Read More
+                        </button>
                     </div>
                 </div>
             </div>

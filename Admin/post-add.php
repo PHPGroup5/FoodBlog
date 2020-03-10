@@ -3,6 +3,7 @@
 include("config.php");
 
 $title = $_POST['title'];
+$intro = $_POST['intro'];
 $content = $_POST['content'];
 $category_id = $_POST['category_id'];
 $photo = $_FILES['photo']['name'];
@@ -12,7 +13,7 @@ if ($photo) {
     move_uploaded_file($tmp, "assets/img/covers/$photo");
 }
 
-$sql = "INSERT INTO post(title,cat_id,photo,content,created_date,modified_date) VALUES('$title','$category_id','$photo','$content',now(),now())";
+$sql = "INSERT INTO post(title,cat_id,photo,intro,content,created_date,modified_date) VALUES('$title','$category_id','$photo','$intro','$content',now(),now())";
 mysqli_query($conn, $sql);
 
 header("location: table.php");
