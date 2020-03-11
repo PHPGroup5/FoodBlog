@@ -12,7 +12,6 @@ if ($_SESSION["loginStatus"] == 0) {
     require_once('include/loginNav.php'); ?>
 <header class="masthead">
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
     <div id="example-box-reg" class="example-box">
         <div class="background-shapes"></div>

@@ -36,7 +36,6 @@ session_start(); ?>
 
 <body>
 <script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <?php
 if ($_SESSION["loginStatus"] == 0) {
     require_once('include/navbar.php');

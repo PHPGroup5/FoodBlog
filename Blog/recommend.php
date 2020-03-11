@@ -7,7 +7,6 @@ require_once('include/header.php') ?>
     <body>
 
 <script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
 
 <?php

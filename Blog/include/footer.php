@@ -34,7 +34,6 @@
         reserved.<br><br></p>
 </footer>
 <script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/clean-blog.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote.min.js"></script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e046d39c114b46f"></script>
