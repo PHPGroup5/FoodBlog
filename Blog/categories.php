@@ -40,7 +40,6 @@ session_start(); ?>
 
 <body>
 <script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <?php
 if ($_SESSION["loginStatus"] == 0) {
     require_once('include/navbar.php');
@@ -76,10 +75,10 @@ if ($_SESSION["loginStatus"] == 0) {
     </div>
 </section>
 <script src="assets/js/agency.js"></script>
-<footer>
+<footer style="padding: 25px 50px !important;">
     <div class="row">
         <div class="col-sm-6 col-md-4 text-center footer-navigation">
-            <h3><a href="#">Taste the Joy</a></h3>
+            <h3><a href="index.php">Taste the Joy</a></h3>
             <p class="links"><a href="index.php">Home</a><strong> · </strong><a href="about.php">About</a><strong>
                     · </strong><a href="login.php">Login</a><strong> · </strong><a href="register.php">Register</a></p>
         </div>
@@ -103,8 +102,8 @@ if ($_SESSION["loginStatus"] == 0) {
             <h4>About the website</h4>
             <p><br>This is our college project in PHP. In this website, you can read reviews about the restaurants in
                 Yangon.&nbsp;<br><br></p>
-            <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i
-                            class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i
+            <div class="social-links social-icons"><a href="facebook.com"><i class="fa fa-facebook"></i></a><a href="twitter.com"><i
+                            class="fa fa-twitter"></i></a><a href="linkedin.com"><i class="fa fa-linkedin"></i></a><a href="github.com"><i
                             class="fa fa-github"></i></a></div>
         </div>
     </div>
@@ -112,7 +111,6 @@ if ($_SESSION["loginStatus"] == 0) {
         reserved.<br><br></p>
 </footer>
 <script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/clean-blog.js"></script>
 </body>
 

@@ -12,7 +12,6 @@ if ($_SESSION["loginStatus"] == 0) {
     require_once('include/loginNav.php'); ?>
 <header class="masthead">
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
     <div id="example-box-reg" class="example-box">
         <div class="background-shapes"></div>
@@ -32,12 +31,12 @@ if ($_SESSION["loginStatus"] == 0) {
                 ?>
                 <div class="clean-blog-post" style="padding-bottom: 70px;">
                     <div class="row">
-                        <div class="col-lg-5"><img class="rounded img-fluid" src="../Admin/assets/img/covers/<?php echo $data['photo'] ?>"></div>
+                        <div class="col-lg-5"><img class="rounded img-fluid" src="../Admin/assets/img/covers/<?php echo $data['photo'] ?>" style="width: 500px;height: 300px;"></div>
                         <div class="col-lg-7">
                             <h3><?php echo $data['title']?></h3>
                             <div class="info"><span class="text-muted"><?php echo $data['created_date']?></span></div>
-                            <p><?php echo substr($data['content'], 0, 400); ?></p>
-                            <button class="btn btn-outline-primary btn-sm" type="button"><a href="blogpost1.php">Read More</a>
+                            <p><?php echo ($data['intro']); ?></p>
+                            <button class="btn btn-outline-primary btn-sm" type="button"><a href="blogpost1.php?id=<?php echo $data['id']?>">Read More</a>
                             </button>
                         </div>
                     </div>

@@ -76,7 +76,13 @@ else {
                                     <?php endwhile; ?>
                                 </select>
                             </div>
-
+                            
+                            <div class="form-group">
+                                <label for="title">Intro</label>
+                                <input type="text" class="form-control" name="intro" id="intro" required="required" placeholder="Intro" value="<?php echo $row['intro']?>">
+                                <input type="hidden" class="form-control" name="oldIntro" id="Oldintro" required="required" placeholder="Intro" value="<?php echo $row['intro']?>">
+                            </div>
+                            
                             <div class="form-group">
                                 <label for="photo">Featured Image</label>
                                 <input type="file" name="photo" class="form-control" id="photo">

@@ -1,5 +1,6 @@
 <?php
     include("config.php");
+    $intro = $_POST['intro'];
     $title = $_POST['title'];
     $content = $_POST['content'];
     $id = $_POST['postID'];
@@ -9,6 +10,9 @@
         if ($title == "") {
             $title = $_POST['oldtitle'];
         }
+        if ($intro == "") {
+    $intro = $_POST['oldIntro'];
+}
     if ($photo) {
         move_uploaded_file($tmp, "assets/img/covers/$photo");
     }

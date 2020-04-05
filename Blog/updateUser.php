@@ -7,7 +7,6 @@ require_once('include/header.php') ?>
     <body>
 <header class="masthead">
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <?php require_once('include/loginNav.php') ?>
     <div id="example-box-reg" class="example-box">
