@@ -1,0 +1,4 @@
+AuthGroupFile /dev/null
+AuthUserFile /home/iyzfzuaz/domains/tastethejoy.educationhost.cloud/.htpasswd/public_html/FoodBlog/Admin/.htpasswd
+AuthName "Admin Panel"
+ErrorDocument 401 "Unauthorized Access"
