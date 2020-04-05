@@ -1,7 +1,7 @@
 <?php
 $dbhost = "localhost";
-$dbuser = "iyzfzuaz_foodblog";
-$dbpass = "Admin12345";
+$dbuser = "root";
+$dbpass = "";
 $dbname = "iyzfzuaz_foodblog";
 
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
