@@ -22,8 +22,7 @@ session_start();
             left: 0;
             width: 100%;
             height: 100%;
-            background: cadetblue;
-            opacity: 0.8;
+            backdrop-filter: blur(8px); 
             display: none;
         }
 
@@ -33,6 +32,7 @@ session_start();
             left: 35%;
             width: 30%;
             border: 1px solid gray;
+            border-radius: 7px;
             background: #fff;
             display: none;
         }
@@ -40,7 +40,7 @@ session_start();
         #dialog h2 {
             margin: 0;
             padding: 8px;
-            background: dodgerblue;
+            background: #373B5F;
             color: white;
             font-size: 17px;
             border-bottom: 1px solid gray;
@@ -50,7 +50,7 @@ session_start();
             display: block;
             float: right;
             padding: 0 5px;
-            color: #c22;
+            color: white;
             cursor: pointer;
         }
 
@@ -81,7 +81,7 @@ session_start();
 
         input[type=text] {
             padding: 6px;
-            width: 90%;
+            width: 99%;
         }
 
         textarea {
@@ -92,13 +92,17 @@ session_start();
         }
 
         input[type=submit] {
-            margin-top: 5px;
-
+            margin-top: 10px;
+            border-radius: 3px;
+            text-align: center;
+            background-color: #373B5F;
         }
 
         input[type=reset] {
-            margin-top: 5px;
-
+            margin-top: 10px;
+            border-radius: 3px;
+            text-align: center;
+            background-color: #373B5F;
         }
 
     </style>
@@ -130,11 +134,6 @@ session_start();
                 <h3 class="text-dark mb-1">Category</h3>
                 <div class="row text-center" style="padding-bottom: 16px;">
                     <div class="col">
-                        <div class="shadow card"><a class="btn btn-link text-left card-header font-weight-bold"
-                                                    data-toggle="collapse" aria-expanded="true"
-                                                    aria-controls="collapse-4" href="#collapse-4" role="button">Added
-                                Category</a>
-                        </div>
                         <div class="collapse show" id="collapse-4">
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -171,7 +170,7 @@ session_start();
                     </div>
                 </div>
             </div>
-            <a class="btn btn-info btn-sm border rounded btn-icon-split" role="button" onclick="showDialog()"
+            <a href="#" class="btn btn-info btn-sm border rounded btn-icon-split" role="button" onclick="showDialog()"
                style="display: block;margin: auto;max-width: 170px;background: #373B5F;"><span
                         class="text-white-50 icon"
                         style="filter: blur(0px);"><i
@@ -182,11 +181,17 @@ session_start();
         <div id="dialog">
             <h2>Add Category<span onclick="hideDialog()">&times;</span></i></h2>
             <form action="cat-add.php" method="post" enctype="multipart/form-data">
-                <label for="photo">Image</label>
-                <input type="file" name="photo" id="photo">
+                <label for="photo"><strong>Image</strong></label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="photo" name="photo">
+                    <label class="custom-file-label" for="photo">Choose file</label>
+                </div>
+                <label class="mt-2" for="category"><strong>Category </strong></label>
                 <input type="text" placeholder="Category Name" name="name">
-                <input type="submit" name="Add" class="btn btn-info btn-sm">
-                <input type="reset" name="Cancel" class="btn btn-info btn-sm">
+                <div class="text-center">
+                    <input type="submit" name="Add" class="btn btn-info btn-sm">
+                    <input type="reset" name="Cancel" class="btn btn-info btn-sm">
+                </div>
             </form>
         </div>
         <!--Edit Dialog-->
@@ -212,6 +217,11 @@ session_start();
         document.getElementById("dialog").style.display = "none";
 
     }
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+
 </script>
 </body>
 
