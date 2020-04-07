@@ -93,10 +93,10 @@ if ($_SESSION["adminLoginStatus"] != 1) {
                                             <td><img class="rounded-circle border shadow mr-2" width="60"
                                                      src="assets/img/covers/<?php echo $row['photo'] ?>"></td>
                                             <td><a href="post-edit.php?id=<?php echo $row['id'] ?>"><i
-                                                            class="material-icons border rounded border-info">edit</i></a>
+                                                            class="fas fa-edit">edit</i></a>
                                             </td>
                                             <td><a href="post-del.php?id=<?php echo $row['id'] ?>"><i
-                                                            class="material-icons border rounded border-danger">delete</i></a>
+                                                            class="far fa-trash-alt">delete</i></a>
                                             </td>
                                         </tr>
                                     <?php endwhile; ?>
