@@ -2,6 +2,9 @@
 session_start();
 require_once('include/header.php') ?>
 <title>Search Results - FoodBlog</title>
+<head>
+    <style>
+    .text-red{color:#e74a3b;}</style>
 </head>
 
 <body>
@@ -44,9 +47,9 @@ if ($_SESSION["loginStatus"] == 0) {
         <?php endwhile ;
         } else
             echo " <div class=\"text-center mt-5\">
-                    <div class=\"error mx-auto\" data-text=\"404\">
+                    <div class=\"error mx-auto\" >
                     </div>
-                    <p class=\"text-dark mb-5 lead\">Page Not Found</p>
+                    <p  class=\"text-red mb-5 lead\" >Page Not Found</p>
                     <p class=\"text-black-50 mb-0\">It looks like you found an error!</p>
                 </div>";
         ?>
@@ -54,3 +57,4 @@ if ($_SESSION["loginStatus"] == 0) {
     </div>
 </div>
 <?php require_once('include/footer.php'); ?>
+</body>

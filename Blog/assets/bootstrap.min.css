@@ -3,7 +3,14 @@
  * Copyright 2013-2019, Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700");
+.text-dark {
+    color: #e74a3b !important;
+}
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors

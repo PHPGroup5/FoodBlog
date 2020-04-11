@@ -96,11 +96,7 @@ if($_SESSION["adminLoginStatus"]!=1) {
 
             </div>
         </div>
-        <footer class="bg-white sticky-footer">
-            <div class="container my-auto">
-                <div class="text-center my-auto copyright"></div>
-            </div>
-        </footer>
+        
     </div></div>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>

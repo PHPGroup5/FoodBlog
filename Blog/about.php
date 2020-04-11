@@ -20,7 +20,7 @@ require_once('include/header.php') ?>
 </header>
 <div class="container">
     <section class="py-5">
-        <h1 class="text-center text-uppercase">Our team</h1>
+        
         <h2 class="text-center text-uppercase text-secondary mb-5">Project Member</h2>
         <div class="container">
             <div class="row">
