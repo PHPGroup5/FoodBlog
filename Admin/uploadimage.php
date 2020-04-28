@@ -8,16 +8,14 @@ $file_ext=strtolower(end(explode('.',$image)));
 $extensions= array("jpeg","jpg","png", "gif");
 
 if(!in_array($file_ext,$extensions)){
-    header("location: register.php?msg=failed");
+    header("location: profile.php?msg=failed");
 }
-else{
-    if($image){
-        move_uploaded_file($tmp,"assets/img/avatars/$image");
-    }
-}
+else if($image) {
+    move_uploaded_file($tmp, "assets/img/avatars/$image");
 
-$sql="UPDATE admins SET profile_image='$image' WHERE id='$id'";
-mysqli_query($conn,$sql);
-$_SESSION['photo'] = $image;
-header("location: profile.php");
+    $sql = "UPDATE admins SET profile_image='$image' WHERE id='$id'";
+    mysqli_query($conn, $sql);
+    $_SESSION['photo'] = $image;
+    header("location: profile.php");
+}
 ?>
