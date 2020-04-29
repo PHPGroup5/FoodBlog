@@ -21,9 +21,13 @@
         <div class="background-shapes"></div>
     </div>
 </header>
-<div class="login-card"><img class="profile-img-card" src="assets/img/avatar_2x.png">
-    <p class="profile-name-card"></p>
-    <form class="form-signin" action="loginCheck.php" method="post"><span class="reauth-email"> </span>
+<div class="login-card">
+
+
+    <form class="form-signin" action="loginCheck.php" method="post">
+        <span class="h2"><h2>LOGIN</h2></span
+
+        <span class="reauth-email"> </span>
         <input <?php if (isset($_GET["msg"]) && $_GET["msg"] == 'failed') { ?>
                 style="border: #FF0000 solid 1px;"
                 <?php } ?>class="form-control" type="email" id="inputEmail" required="" placeholder="Email address"
