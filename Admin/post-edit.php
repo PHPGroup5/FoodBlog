@@ -85,7 +85,7 @@ else {
                             
                             <div class="form-group">
                                 <label for="photo">Featured Image</label>
-                                <input type="file" name="photo" class="form-control" id="photo">
+                                <input type="file" name="photo" class="form-control" id="photo" value="assets/img/covers/<?php echo $row['photo'] ?>">
                             </div>
 
                             <div class="form-group">
