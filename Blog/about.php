@@ -133,7 +133,7 @@ require_once('include/header.php') ?>
                                 <div class="py-1 px-3 text-center">
                                     <h3 class="text-capitalize m-0">Thet Su Su Kyaw</h3>
                                     <p class="text-secondary mb-3">Front End and Back End Developer</p>
-                                    <p><em>Hi I am Thet Su. Taste the Joy is a destination for millions
+                                    <p><em>Hello, I am Thet Su. Taste the Joy is a goal for millions
                                             of passionate and hungry readers. </em></div>
 
                             </div>
