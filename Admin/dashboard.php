@@ -6,7 +6,9 @@ if($_SESSION["adminLoginStatus"]!=1) {
     header("Location: ./");
 }?>
 <title>Admin Panel</title>
-</head>
+<head>
+    <style>
+    .bg{background-color: #f8f9fc;}</style></head>
 <body id="page-top">
 <div id="wrapper">
     <?php require_once('include/nav.php') ?>
@@ -96,7 +98,11 @@ if($_SESSION["adminLoginStatus"]!=1) {
 
             </div>
         </div>
-        
+        <footer class="bg sticky-footer">
+            <div class="container my-auto">
+                <div class="text-center my-auto copyright"></div>
+            </div>
+        </footer>
     </div></div>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>

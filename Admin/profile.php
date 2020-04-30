@@ -31,7 +31,7 @@ if ($_SESSION["adminLoginStatus"] != 1) {
             opacity: 0;
             cursor: pointer;
         }
-
+.bg {background-color: #f8f9fc;}
         #fileupload-example-5 {
             position: relative;
             overflow: hidden;
@@ -185,7 +185,7 @@ if ($_SESSION["adminLoginStatus"] != 1) {
                 </div>
             </div>
         </div>
-        <footer class="bg-white sticky-footer">
+        <footer class="bg sticky-footer">
             <div class="container my-auto">
                 <div class="text-center my-auto copyright"></div>
             </div>
