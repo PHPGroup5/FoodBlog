@@ -24,6 +24,17 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote.min.css" rel="stylesheet">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote.min.js"></script>
+    <style type="text/css">
+
+        .container-fluid
+        {
+            align-content: center;
+        }
+        .container-fluid h3
+        {
+           padding-top: 2%;
+        }        
+    </style>
 </head>
 <body>
 <?php
@@ -37,6 +48,7 @@ $_SESSION['postID'] = $_GET['id'];
 $sql = "SELECT * FROM post  where id='" . $_SESSION['postID'] . "'";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
+$cat=$row['cat_id'];
 ?>
 <header class="masthead">
     <div id="example-box-Home" class="example-box">
@@ -60,41 +72,29 @@ $row = mysqli_fetch_assoc($result);
         } ?>
     </div>
 </article>
-<footer>
-    <div class="row">
-        <div class="col-sm-6 col-md-4 text-center footer-navigation">
-            <h3><a href="#">Taste the Joy</a></h3>
-            <p class="links"><a href="index.php">Home</a><strong> · </strong><a href="about.php">About</a><strong>
-                    · </strong><a href="login.html">Login</a><strong> · </strong><a href="register.php">Register</a></p>
-        </div>
-        <div class="col-sm-6 col-md-4 footer-contacts">
-            <div><span class="fa fa-map-marker footer-contacts-icon"
-                       style="margin-bottom: 0px;margin-top: 10px;"> </span>
-                <p style="margin-top: 10px;"><span class="new-line-span" style="font-size: 12px;"><a
-                                class="footerContents" href="https://goo.gl/maps/13yrnrAeLwyFL41b6" target="_blank">University of Information Technology</a></span>Yangon,
-                    Myanmar</p>
+
+
+    <div class="container-fluid">
+        <h3> More Like This </h3>
+        <div class="card-deck">
+            
+            <?php
+
+            $result = mysqli_query($conn, "SELECT * FROM post where cat_id=$cat ORDER BY RAND() LIMIT 5");
+            while ($row = mysqli_fetch_assoc($result)):
+            ?>
+            <div class="card" style="margin-bottom: 2%; background-color: #F7F7F7;">
+
+              <img class="card-img-top" src="../Admin/assets/img/covers/<?php echo $row['photo'] ?>" style="width: 100%;height: 50%; ">
+                <div class="card-body">
+                   <a href="blogpost1.php?id=<?php echo $row['id']; ?>"> <h5 class="card-text" style="text-align: center; padding: 1%;"><?php echo $row['title']?></h5> </a>
+                </div>
             </div>
-            <div><i class="fa fa-phone footer-contacts-icon"></i>
-                <p class="footer-center-info email text-left" style="margin-top: 10px;"> +959426564404</p>
-            </div>
-            <div><i class="fa fa-envelope footer-contacts-icon"></i>
-                <p style="margin-top: 10px;"><a class="footerContents" href="https://outlook.office365.com/owa/"
-                                                target="_blank">heinkhantzaw@uit.edu.mm</a></p>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-        <div class="col-md-4 footer-about">
-            <h4>About the website</h4>
-            <p><br>This is our college project in PHP. In this website, you can read everything about food.&nbsp;<br><br></p>
-            <div class="social-links social-icons">
-                <a href="https://www.facebook.com/hein.zaw.9028"><i class="fa fa-facebook"></i></a>
-                <a href="https://www.linkedin.com/in/hein-zaw-66901b195/"><i class="fa fa-linkedin"></i></a>
-                <a href="https://github.com/PHPGroup5/FoodBlog/tree/master"><i class="fa fa-github"></i></a></div>
+            <?php endwhile; ?>
+            
         </div>
     </div>
-    <p class="text-center company-name" style="font-size: 12px;"><br>Copyright © 2020 Group 5. All rights
-        reserved.<br><br></p>
-</footer>
+
 <script src="assets/js/clean-blog.js"></script>
 
 <script>
@@ -115,6 +115,4 @@ $row = mysqli_fetch_assoc($result);
     });
 </script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e046d39c114b46f"></script>
-
-</body>
-</html>
+<?php require_once('include/footer.php'); ?>

@@ -3,7 +3,7 @@
         <ul class="nav navbar-nav flex-nowrap ml-auto">
             <div class="d-none d-sm-block topbar-divider"></div>
             <li class="nav-item dropdown no-arrow" role="presentation">
-                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small"><?php
+                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small"><?php include("config.php");
                             echo $_SESSION['adminFirstName']." ".$_SESSION['adminLastName'];
                             ?></span>
                         <img class="border rounded-circle img-profile" src="assets/img/avatars/<?php echo $_SESSION['photo']?>"></a>
