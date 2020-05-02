@@ -1,11 +1,12 @@
 <?php $title = 'Update Category - Taste the Joy'; ?>
-<?php require_once('include/header.php') ?>
+<?php include("config.php");
+require_once('include/header.php') ?>
 
 <body id="page-top">
 <div id="wrapper">
-    <?php
+    <?php 
     if (isset($_POST['submit'])) {
-        include("config.php");
+        
         $name = $_POST['category'];
         $id = $_GET['id'];
         $sql = "UPDATE category SET name = '" . $name . "' , modified_date = NOW() WHERE id = '" . $id . "'";

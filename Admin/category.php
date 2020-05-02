@@ -30,7 +30,7 @@ session_start();
             position: absolute;
             top: 26%;
             left: 35%;
-            width: 30%;
+            width: 33%;
             border: 1px solid gray;
             border-radius: 7px;
             background: #fff;
@@ -92,15 +92,8 @@ session_start();
         }
 
         input[type=submit] {
-            margin-top: 10px;
-            border-radius: 3px;
-            text-align: center;
-            background-color: #373B5F;
-        }
-
-        input[type=reset] {
-            margin-top: 10px;
-            border-radius: 3px;
+            margin-top: 15px;
+            border-radius: 5px;
             text-align: center;
             background-color: #373B5F;
         }
@@ -182,15 +175,17 @@ session_start();
             <h2>Add Category<span onclick="hideDialog()">&times;</span></i></h2>
             <form action="cat-add.php" method="post" enctype="multipart/form-data">
                 <label for="photo"><strong>Image</strong></label>
+
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="photo" name="photo">
+                    <input type="file" class="custom-file-input" id="photo" name="photo" required>
                     <label class="custom-file-label" for="photo">Choose file</label>
                 </div>
-                <label class="mt-2" for="category"><strong>Category </strong></label>
-                <input type="text" placeholder="Category Name" name="name">
+                <label class="mt-3" for="category"><strong>Category </strong></label>
+                <input type="text" placeholder="Category Name" name="name" required>
                 <div class="text-center">
+
                     <input type="submit" name="Add" class="btn btn-info btn-sm">
-                    <input type="reset" name="Cancel" class="btn btn-info btn-sm">
+                    
                 </div>
             </form>
         </div>
@@ -217,7 +212,7 @@ session_start();
         document.getElementById("dialog").style.display = "none";
 
     }
-$(".custom-file-input").on("change", function() {
+    $(".custom-file-input").on("change", function() {
   var fileName = $(this).val().split("\\").pop();
   $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
 });
